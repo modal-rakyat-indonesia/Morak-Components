@@ -1,0 +1,13 @@
+Command how to run docker:
+
+BUILD
+$ docker build ./ -t antdesign --no-cache
+
+LOOK UP IMAGES
+$ docker images
+
+RUN
+$ docker run -it -p 3000:3000 -v ${PWD}/src:/antdesignproject/src 830547fdbf03
+
+CLEAR ALL CONTAINERS
+$ docker system prune -a
