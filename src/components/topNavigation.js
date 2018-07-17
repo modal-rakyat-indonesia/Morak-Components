@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse, Navbar, Nav, NavItem,
   NavbarToggler, NavbarBrand, NavLink, UncontrolledDropdown,
@@ -14,13 +15,13 @@ export const TopNavigation = () => (
     <Collapse navbar>
       <Nav className="ml-auto" navbar>
         <NavItem>
-          <NavLink href="/about/">
-            About Us
+          <NavLink tag={Link} to="/">
+            Home
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="https://github.com/reactstrap/reactstrap">
-            GitHub
+          <NavLink tag={Link} to="/about-us">
+            About Us
           </NavLink>
         </NavItem>
         <UncontrolledDropdown nav inNavbar>

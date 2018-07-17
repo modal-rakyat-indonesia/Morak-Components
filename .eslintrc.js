@@ -15,6 +15,7 @@ module.exports = {
       'import/extensions': ['error', 'always', {
          js: 'never'
       }],
+      'no-console': ['error',  { allow: ['warn'] }],
       'comma-dangle': ['error', 'never'],
       'no-unused-vars': ['error', {
         'args': 'none',
