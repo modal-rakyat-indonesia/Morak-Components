@@ -3,7 +3,7 @@ export const INCREMENT = 'counter/INCREMENT';
 export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED';
 export const DECREMENT = 'counter/DECREMENT';
 
-export const increment = (dispatch) => {
+export const increment = () => (dispatch) => {
   dispatch({
     type: INCREMENT_REQUESTED
   });
@@ -13,7 +13,7 @@ export const increment = (dispatch) => {
   });
 };
 
-export const incrementAsync = (dispatch) => {
+export const incrementAsync = () => (dispatch) => {
   dispatch({
     type: INCREMENT_REQUESTED
   });
@@ -26,7 +26,7 @@ export const incrementAsync = (dispatch) => {
 };
 
 
-export const decrement = (dispatch) => {
+export const decrement = () => (dispatch) => {
   dispatch({
     type: DECREMENT_REQUESTED
   });
@@ -37,7 +37,7 @@ export const decrement = (dispatch) => {
 };
 
 
-export const decrementAsync = (dispatch) => {
+export const decrementAsync = () => (dispatch) => {
   dispatch({
     type: DECREMENT_REQUESTED
   });
