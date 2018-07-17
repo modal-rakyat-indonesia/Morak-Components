@@ -1,6 +1,8 @@
-h3{
-    &.largered{
-        font-size: 52px;
-        color: #afafaf;
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+img{
+    &.brand{
+        max-height: 25px;
+        min-height: 25px;
     }
 }

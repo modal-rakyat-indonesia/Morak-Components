@@ -7,7 +7,6 @@ import App from './containers/app';
 
 import './index.css';
 import './styles/index.scss';
-import 'antd/dist/antd.css';
 
 const target = document.querySelector('#root');
 

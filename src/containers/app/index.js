@@ -2,10 +2,12 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Home from '../home';
 import About from '../about';
+import Navigation from '../../components/topnavigation';
 
 const App = () => (
   <div>
     <header>
+      <Navigation />
       <Link to="/">
         Home
       </Link>
