@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
+import { loadingBarMiddleware } from 'react-redux-loading-bar';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import rootReducer from './reducers/index';
@@ -31,7 +32,8 @@ const composedEnhancers = compose(
 const store = createStore(
   rootReducer,
   initialState,
-  composedEnhancers
+  composedEnhancers,
+  applyMiddleware(loadingBarMiddleware())
 );
 
 export default store;
