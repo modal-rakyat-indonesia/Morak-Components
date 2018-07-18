@@ -63,6 +63,10 @@ export const getJsonPlaceholder = () => async (dispatch) => {
   let result = [];
 
   dispatch(showLoading());
+  dispatch({
+    type: GET_JSONPLACEHOLDER,
+    data: []
+  });
 
   try {
     const { data } = await GetJsonPlaceholder();
@@ -73,12 +77,10 @@ export const getJsonPlaceholder = () => async (dispatch) => {
       message: error
     });
   } finally {
-    setTimeout(() => {
-      dispatch({
-        type: GET_JSONPLACEHOLDER,
-        data: result
-      });
-      dispatch(hideLoading());
-    }, 2000);
+    dispatch({
+      type: GET_JSONPLACEHOLDER,
+      data: result
+    });
+    dispatch(hideLoading());
   }
 };
