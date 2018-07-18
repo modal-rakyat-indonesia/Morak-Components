@@ -1,12 +1,14 @@
 import {
   INCREMENT_REQUESTED, INCREMENT, DECREMENT_REQUESTED,
-  DECREMENT
-} from '../actions/counter';
+  DECREMENT, GET_JSONPLACEHOLDER, NOTIFY_MESSAGE
+} from '../actions/home';
 
 const initialState = {
   count: 0,
   isIncrementing: false,
-  isDecrementing: false
+  isDecrementing: false,
+  data: [],
+  message: ''
 };
 
 export default (state = initialState, action) => {
@@ -35,6 +37,18 @@ export default (state = initialState, action) => {
         ...state,
         count: state.count - 1,
         isDecrementing: !state.isDecrementing
+      };
+
+    case GET_JSONPLACEHOLDER:
+      return {
+        ...state,
+        data: action.data
+      };
+
+    case NOTIFY_MESSAGE:
+      return {
+        ...state,
+        message: action.message
       };
 
     default:

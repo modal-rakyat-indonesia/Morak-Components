@@ -4,7 +4,6 @@ import Home from '../home';
 import About from '../about';
 import Navigation from '../../components/topNavigation';
 
-
 const App = () => (
   <div>
     <header>
