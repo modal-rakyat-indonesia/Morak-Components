@@ -1,6 +1,6 @@
 import {
   INCREMENT_REQUESTED, INCREMENT, DECREMENT_REQUESTED,
-  DECREMENT, GET_JSONPLACEHOLDER, NOTIFY_MESSAGE
+  DECREMENT, GET_JSONPLACEHOLDER, NOTIFY_MESSAGE, NAVBAR_TOGGLE
 } from '../actions/home';
 
 const initialState = {
@@ -8,7 +8,8 @@ const initialState = {
   isIncrementing: false,
   isDecrementing: false,
   data: [],
-  message: ''
+  message: '',
+  isNavbarOpen: false
 };
 
 export default (state = initialState, action) => {
@@ -49,6 +50,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         message: action.message
+      };
+
+    case NAVBAR_TOGGLE:
+      return {
+        ...state,
+        isNavbarOpen: !state.isNavbarOpen
       };
 
     default:

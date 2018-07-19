@@ -7,6 +7,7 @@ export const DECREMENT_REQUESTED = 'home/DECREMENT_REQUESTED';
 export const DECREMENT = 'home/DECREMENT';
 export const GET_JSONPLACEHOLDER = 'home/GET_JSONPLACEHOLDER';
 export const NOTIFY_MESSAGE = 'home/NOTIFY_MESSAGE';
+export const NAVBAR_TOGGLE = 'home/NAVBAR_TOGGLE';
 
 export const increment = () => (dispatch) => {
   dispatch({
@@ -77,10 +78,18 @@ export const getJsonPlaceholder = () => async (dispatch) => {
       message: error
     });
   } finally {
-    dispatch({
-      type: GET_JSONPLACEHOLDER,
-      data: result
-    });
-    dispatch(hideLoading());
+    setTimeout(() => {
+      dispatch({
+        type: GET_JSONPLACEHOLDER,
+        data: result
+      });
+      dispatch(hideLoading());
+    }, 2500);
   }
+};
+
+export const toggleNavigation = () => (dispatch) => {
+  dispatch({
+    type: NAVBAR_TOGGLE
+  });
 };
