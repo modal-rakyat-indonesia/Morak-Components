@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Jumbotron, Button } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getJsonPlaceholder } from '../../actions/home';
 
 const Heading = ({ getJsonPlaceholder }) => (
@@ -20,7 +21,8 @@ const Heading = ({ getJsonPlaceholder }) => (
       </p>
       <p className="lead">
         <Button onClick={getJsonPlaceholder} color="primary">
-          Mulai Pendanaan
+          Mulai Pendanaan&nbsp;
+          <FontAwesomeIcon icon="chevron-right" />
         </Button>
       </p>
     </Jumbotron>
