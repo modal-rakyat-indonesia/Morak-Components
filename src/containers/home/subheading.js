@@ -22,7 +22,7 @@ class Subheading extends React.Component {
     return (
       <Container>
         <CustomInput label="Username" id="username" type="text" />
-        <CustomInput label="Password" id="password" type="password" />
+        <CustomInput label="Password" id="password" type="password" value="abc" />
         <CustomSelect label="Pilih Opsi" id="select" options={options} />
         <ListGroup>
           {data.map(({ id, title, body }, index) => (

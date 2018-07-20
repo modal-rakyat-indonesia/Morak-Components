@@ -7,17 +7,23 @@ class CustomInput extends React.Component {
   componentWillMount() {
     const { value } = this.props;
     this.setState({
-      isActive: value !== '' && value !== undefined
+      isActive: value !== '' && value !== undefined,
+      isFocused: false
     });
   }
 
   onFocus = () => {
     this.setState({
-      isActive: true
+      isActive: true,
+      isFocused: true
     });
   }
 
   onBlur= (e) => {
+    this.setState({
+      isFocused: false
+    });
+
     if (e.target.value === '') {
       this.setState({
         isActive: false
@@ -30,7 +36,9 @@ class CustomInput extends React.Component {
 
     return (
       <FormGroup>
-        <Label className={this.state.isActive ? 'active' : ''}>
+        <Label className={(this.state.isActive ? 'active' : '') +
+          (this.state.isFocused ? ' focused' : '')}
+        >
           {attributes.label}
         </Label>
         <Input

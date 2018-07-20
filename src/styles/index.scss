@@ -12,17 +12,21 @@ $brand: #08f;
     z-index: 0;
     transition: 0.3s;
     cursor: text;
+    
     &.active{
       margin: -0.5rem;
       margin-left: 0.5rem;
-      color: $brand;
+      color: #333;
       transition: 0.3s;
       padding-left: 0.25rem;
       padding-right: 0.25rem;
       font-size: 12px;
       z-index: 2;
+      &.focused{
+        color: $brand;
       }
     }
+  }
 
     .form-control{
         background: none;
