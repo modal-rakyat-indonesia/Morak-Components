@@ -6,6 +6,7 @@ import { Container, ListGroup, ListGroupItem } from 'reactstrap';
 import {
   getJsonPlaceholder
 } from '../../actions/home';
+import CustomInput from '../../components/customInput';
 
 class Subheading extends React.Component {
   componentDidMount() {
@@ -19,6 +20,8 @@ class Subheading extends React.Component {
     } = this.props;
     return (
       <Container>
+        <CustomInput label="Username" id="username" type="text" />
+        <CustomInput label="Password" id="password" type="password" />
         <ListGroup>
           {data.map(({ id, title, body }, index) => (
             <ListGroupItem key={id}>
