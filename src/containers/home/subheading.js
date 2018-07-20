@@ -7,6 +7,7 @@ import {
   getJsonPlaceholder
 } from '../../actions/home';
 import CustomInput from '../../components/customInput';
+import CustomSelect from '../../components/customSelect';
 
 class Subheading extends React.Component {
   componentDidMount() {
@@ -16,12 +17,13 @@ class Subheading extends React.Component {
 
   render() {
     const {
-      data
+      data, options
     } = this.props;
     return (
       <Container>
         <CustomInput label="Username" id="username" type="text" />
         <CustomInput label="Password" id="password" type="password" />
+        <CustomSelect label="Pilih Opsi" id="select" options={options} />
         <ListGroup>
           {data.map(({ id, title, body }, index) => (
             <ListGroupItem key={id}>
@@ -41,7 +43,8 @@ const mapStateToProps = ({ home }) => ({
   count: home.count,
   isIncrementing: home.isIncrementing,
   isDecrementing: home.isDecrementing,
-  data: home.data
+  data: home.data,
+  options: home.options
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
@@ -51,7 +54,8 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 
 Subheading.propTypes = {
   data: PropTypes.array.isRequired,
-  getJsonPlaceholder: PropTypes.func.isRequired
+  getJsonPlaceholder: PropTypes.func.isRequired,
+  options: PropTypes.array.isRequired
 };
 
 export default connect(

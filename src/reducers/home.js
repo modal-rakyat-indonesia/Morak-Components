@@ -9,7 +9,21 @@ const initialState = {
   isDecrementing: false,
   data: [],
   message: '',
-  isNavbarOpen: false
+  isNavbarOpen: false,
+  options: [
+    {
+      id: 1,
+      text: 'Option 1'
+    },
+    {
+      id: 2,
+      text: 'Option 2'
+    },
+    {
+      id: 3,
+      text: 'Option 3'
+    }
+  ]
 };
 
 export default (state = initialState, action) => {

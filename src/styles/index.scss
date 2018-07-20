@@ -30,12 +30,28 @@ $brand: #08f;
         z-index: 1;
         padding-top: 12px;
         padding-bottom: 12px;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        appearance:none;
         
         &:focus{
             border-color: 1px solid $brand;
             box-shadow: 0 0 0 0 transparent;
             background: none;
         }
+
+        &:not([size]):not([multiple]){
+            height: auto;
+        }
+    }
+
+    .arrow-down{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding-left: 0.5rem;
+        width: auto;
+        color: #AFAFAF;
     }
 }
 
