@@ -11,6 +11,9 @@ app.use('/img', express.static(path.join(__dirname, 'build/img')));
 app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, '/index.html'));
 });
+app.get('/about-us', (request, response) => {
+  response.sendFile(path.join(__dirname, '/build/index.html'));
+});
 
 app.listen(PORT, (error) => {
   if (!error) {
