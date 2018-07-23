@@ -22,13 +22,6 @@ you can change your environment configuration by creating an .env file in the ro
 
 Creating new **Components** should be located in `/src/components` directory, and for **Containers** that contain the **Components** should be located in `/src/containers` folder.
 
-## 404 Pages
-
-You can edit 404 pages on `_error.js` in `pages` directory
-
-## Component usage
-for component usage we will explain it by description in the component itself  
-
 ## Routing
 
 you can add or edit existing `route` on `server.js` for a production build
