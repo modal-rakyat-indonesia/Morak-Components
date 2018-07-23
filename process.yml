@@ -6,5 +6,3 @@ apps:
     watch       : false
     out_file    : '/dev/null'
     error_file  : '/dev/null'
-    env:
-      NODE_ENV  : production
