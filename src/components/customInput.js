@@ -42,9 +42,6 @@ class CustomInput extends React.Component {
           {attributes.label}
         </Label>
         <Input
-          ref={(input) => {
-            this.input = input;
-          }}
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}

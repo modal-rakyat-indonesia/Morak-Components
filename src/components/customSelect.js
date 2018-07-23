@@ -47,9 +47,6 @@ class CustomSelect extends React.Component {
         </Label>
         <Input
           type="select"
-          ref={(input) => {
-            this.input = input;
-          }}
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
