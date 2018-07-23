@@ -20,7 +20,7 @@ class Subheading extends React.Component {
     } = this.props;
     return (
       <Container>
-        <LoadingSpinner show={isLoading} />
+        <LoadingSpinner show={isLoading} size="medium" />
         <ListGroup>
           {data.map(({ id, title, body }, index) => (
             <ListGroupItem key={id}>

@@ -4,8 +4,16 @@ $brand: #08f;
     position: relative;
     text-align: center;
 
-    img{
+    &.small img{
+        width: 50px;
+    }
+
+    &.medium img{
         width: 100px;
+    }
+
+    &.large img{
+        width: 150px;
     }
 }
 
