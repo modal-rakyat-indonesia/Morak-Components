@@ -8,6 +8,17 @@ export const DECREMENT = 'home/DECREMENT';
 export const GET_JSONPLACEHOLDER = 'home/GET_JSONPLACEHOLDER';
 export const NOTIFY_MESSAGE = 'home/NOTIFY_MESSAGE';
 export const NAVBAR_TOGGLE = 'home/NAVBAR_TOGGLE';
+export const TOGGLE_LOADING = 'home/TOGGLE_LOADING';
+
+const showLoadingSpinner = () => ({
+  type: TOGGLE_LOADING,
+  isLoading: true
+});
+
+const hideLoadingSpinner = () => ({
+  type: TOGGLE_LOADING,
+  isLoading: false
+});
 
 export const increment = () => (dispatch) => {
   dispatch({
@@ -45,7 +56,6 @@ export const decrement = () => (dispatch) => {
   });
 };
 
-
 export const decrementAsync = () => (dispatch) => {
   dispatch(showLoading());
   dispatch({
@@ -60,10 +70,14 @@ export const decrementAsync = () => (dispatch) => {
   }, 3000);
 };
 
-export const getJsonPlaceholder = () => async (dispatch) => {
+export const getJsonPlaceholder = isInit => async (dispatch) => {
   let result = [];
+  if (isInit) {
+    dispatch(showLoading());
+  } else {
+    dispatch(showLoadingSpinner());
+  }
 
-  dispatch(showLoading());
   dispatch({
     type: GET_JSONPLACEHOLDER,
     data: []
@@ -83,7 +97,11 @@ export const getJsonPlaceholder = () => async (dispatch) => {
         type: GET_JSONPLACEHOLDER,
         data: result
       });
-      dispatch(hideLoading());
+      if (isInit) {
+        dispatch(hideLoading());
+      } else {
+        dispatch(hideLoadingSpinner());
+      }
     }, 2500);
   }
 };

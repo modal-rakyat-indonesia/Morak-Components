@@ -1,5 +1,14 @@
 $brand: #08f;
 
+.loading-spinner{
+    position: relative;
+    text-align: center;
+
+    img{
+        width: 100px;
+    }
+}
+
 .form-group{
   label{
     background: #FFF;

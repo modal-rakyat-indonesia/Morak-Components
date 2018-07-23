@@ -20,7 +20,7 @@ const Heading = ({ getJsonPlaceholder }) => (
         Modal Rakyat terdaftar resmi dan diawasi langsung oleh OJK dan Kominfo
       </p>
       <p className="lead">
-        <Button onClick={getJsonPlaceholder} color="primary">
+        <Button onClick={() => getJsonPlaceholder(false)} color="primary">
           Mulai Pendanaan&nbsp;
           <FontAwesomeIcon icon="chevron-right" />
         </Button>

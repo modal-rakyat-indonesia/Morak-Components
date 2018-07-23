@@ -6,26 +6,21 @@ import { Container, ListGroup, ListGroupItem } from 'reactstrap';
 import {
   getJsonPlaceholder
 } from '../../actions/home';
-import CustomInput from '../../components/customInput';
-import CustomSelect from '../../components/customSelect';
+import LoadingSpinner from '../../components/loadingSpinner';
 
 class Subheading extends React.Component {
   componentDidMount() {
     const { getJsonPlaceholder } = this.props;
-    getJsonPlaceholder();
+    getJsonPlaceholder(true);
   }
 
   render() {
     const {
-      data, options, url, apiUrl
+      data, isLoading
     } = this.props;
     return (
       <Container>
-        <p>BASE URL from ENV: { url }</p>
-        <p>API URL from ENV: { apiUrl }</p>
-        <CustomInput label="Username" id="username" type="text" />
-        <CustomInput label="Password" id="password" type="password" value="abc" />
-        <CustomSelect label="Pilih Opsi" id="select" options={options} />
+        <LoadingSpinner show={isLoading} />
         <ListGroup>
           {data.map(({ id, title, body }, index) => (
             <ListGroupItem key={id}>
@@ -46,9 +41,7 @@ const mapStateToProps = ({ home }) => ({
   isIncrementing: home.isIncrementing,
   isDecrementing: home.isDecrementing,
   data: home.data,
-  options: home.options,
-  url: home.url,
-  apiUrl: home.apiUrl
+  isLoading: home.isLoading
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
@@ -56,16 +49,13 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch);
 
 Subheading.defaultProps = {
-  url: '',
-  apiUrl: ''
+  isLoading: false
 };
 
 Subheading.propTypes = {
   data: PropTypes.array.isRequired,
   getJsonPlaceholder: PropTypes.func.isRequired,
-  options: PropTypes.array.isRequired,
-  url: PropTypes.string,
-  apiUrl: PropTypes.string
+  isLoading: PropTypes.bool
 };
 
 export default connect(

@@ -1,6 +1,6 @@
 import {
   INCREMENT_REQUESTED, INCREMENT, DECREMENT_REQUESTED,
-  DECREMENT, GET_JSONPLACEHOLDER, NOTIFY_MESSAGE, NAVBAR_TOGGLE
+  DECREMENT, GET_JSONPLACEHOLDER, NOTIFY_MESSAGE, NAVBAR_TOGGLE, TOGGLE_LOADING
 } from '../actions/home';
 
 const initialState = {
@@ -25,7 +25,8 @@ const initialState = {
     }
   ],
   url: process.env.BASE_URL,
-  apiUrl: process.env.API_URL
+  apiUrl: process.env.API_URL,
+  isLoading: false
 };
 
 export default (state = initialState, action) => {
@@ -72,6 +73,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         isNavbarOpen: !state.isNavbarOpen
+      };
+
+    case TOGGLE_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading
       };
 
     default:
