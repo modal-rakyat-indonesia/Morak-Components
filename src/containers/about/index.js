@@ -7,7 +7,9 @@ import { Container } from 'reactstrap';
 import CustomInput from '../../components/customInput';
 import CustomSelect from '../../components/customSelect';
 
-const About = ({ url, apiUrl, options }) => (
+const About = ({
+  url, apiUrl, options, date
+}) => (
   <Container>
     <Helmet>
       <meta charSet="utf-8" />
@@ -21,6 +23,7 @@ const About = ({ url, apiUrl, options }) => (
     </h1>
     <p>BASE URL from ENV: { url }</p>
     <p>API URL from ENV: { apiUrl }</p>
+    <p>Current date and time: { date }</p>
     <CustomInput label="Username" id="username" type="text" />
     <CustomInput label="Password" id="password" type="password" value="abc" />
     <CustomSelect label="Pilih Opsi" id="select" options={options} />
@@ -30,7 +33,8 @@ const About = ({ url, apiUrl, options }) => (
 const mapStateToProps = ({ about }) => ({
   options: about.options,
   url: about.url,
-  apiUrl: about.apiUrl
+  apiUrl: about.apiUrl,
+  date: about.date
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
@@ -38,13 +42,15 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 
 About.defaultProps = {
   url: '',
-  apiUrl: ''
+  apiUrl: '',
+  date: ''
 };
 
 About.propTypes = {
   options: PropTypes.array.isRequired,
   url: PropTypes.string,
-  apiUrl: PropTypes.string
+  apiUrl: PropTypes.string,
+  date: PropTypes.string
 };
 
 export default connect(

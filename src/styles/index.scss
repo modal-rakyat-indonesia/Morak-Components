@@ -18,63 +18,63 @@ $brand: #08f;
 }
 
 .form-group{
-  label{
-    background: #FFF;
-    position: absolute;
-    color: #BFBFBF;
-    margin: 0.8rem;
-    margin-left: 1rem;
-    z-index: 0;
-    transition: 0.3s;
-    cursor: text;
-    
-    &.active{
-      margin: -0.5rem;
-      margin-left: 0.5rem;
-      color: #333;
+  &.custom{
+    label{
+      background: #FFF;
+      position: absolute;
+      color: #BFBFBF;
+      margin: 0.8rem;
+      margin-left: 1rem;
+      z-index: 0;
       transition: 0.3s;
-      padding-left: 0.25rem;
-      padding-right: 0.25rem;
-      font-size: 12px;
-      z-index: 2;
-      &.focused{
-        color: $brand;
+      cursor: text;
+      
+      &.active{
+        margin: -0.5rem;
+        margin-left: 0.5rem;
+        color: #333;
+        transition: 0.3s;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-size: 12px;
+        z-index: 2;
+        &.focused{
+          color: $brand;
+        }
       }
     }
-  }
-
+  
     .form-control{
+      background: none;
+      position: relative;
+      z-index: 1;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      -moz-appearance:none; /* Firefox */
+      -webkit-appearance:none; /* Safari and Chrome */
+      appearance:none;
+          
+      &:focus{
+        border-color: 1px solid $brand;
+        box-shadow: 0 0 0 0 transparent;
         background: none;
-        position: relative;
-        z-index: 1;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        -moz-appearance:none; /* Firefox */
-        -webkit-appearance:none; /* Safari and Chrome */
-        appearance:none;
-        
-        &:focus{
-            border-color: 1px solid $brand;
-            box-shadow: 0 0 0 0 transparent;
-            background: none;
-        }
-
-        &:not([size]):not([multiple]){
-            height: auto;
-        }
+      }
+  
+      &:not([size]):not([multiple]){
+        height: auto;
+      }
     }
-
-    .arrow-down{
+  
+      .arrow-down{
         position: absolute;
         top: 1rem;
         right: 1rem;
         padding-left: 0.5rem;
         width: auto;
         color: #AFAFAF;
-    }
+      }
+  }
 }
-
-
 
 .loading{
     background: $brand;

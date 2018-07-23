@@ -35,7 +35,7 @@ class CustomInput extends React.Component {
     const attributes = Map(this.props).delete('attributes').toJS();
 
     return (
-      <FormGroup>
+      <FormGroup className="custom">
         <Label className={(this.state.isActive ? 'active' : '') +
           (this.state.isFocused ? ' focused' : '')}
         >

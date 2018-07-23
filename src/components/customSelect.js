@@ -39,7 +39,7 @@ class CustomSelect extends React.Component {
       .toJS();
     const { options } = this.props;
     return (
-      <FormGroup>
+      <FormGroup className="custom">
         <Label className={(this.state.isActive ? 'active' : '') +
           (this.state.isFocused ? ' focused' : '')}
         >

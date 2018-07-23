@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const initialState = {
   options: [
     {
@@ -14,7 +16,8 @@ const initialState = {
     }
   ],
   url: process.env.BASE_URL,
-  apiUrl: process.env.API_URL
+  apiUrl: process.env.API_URL,
+  date: moment().format('MMMM Do YYYY, h:mm:ss a')
 };
 
 export default (state = initialState, action) => {
