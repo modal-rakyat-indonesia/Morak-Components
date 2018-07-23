@@ -17,10 +17,12 @@ class Subheading extends React.Component {
 
   render() {
     const {
-      data, options
+      data, options, url, apiUrl
     } = this.props;
     return (
       <Container>
+        <p>BASE URL from ENV: { url }</p>
+        <p>API URL from ENV: { apiUrl }</p>
         <CustomInput label="Username" id="username" type="text" />
         <CustomInput label="Password" id="password" type="password" value="abc" />
         <CustomSelect label="Pilih Opsi" id="select" options={options} />
@@ -44,18 +46,26 @@ const mapStateToProps = ({ home }) => ({
   isIncrementing: home.isIncrementing,
   isDecrementing: home.isDecrementing,
   data: home.data,
-  options: home.options
+  options: home.options,
+  url: home.url,
+  apiUrl: home.apiUrl
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   getJsonPlaceholder
 }, dispatch);
 
+Subheading.defaultProps = {
+  url: '',
+  apiUrl: ''
+};
 
 Subheading.propTypes = {
   data: PropTypes.array.isRequired,
   getJsonPlaceholder: PropTypes.func.isRequired,
-  options: PropTypes.array.isRequired
+  options: PropTypes.array.isRequired,
+  url: PropTypes.string,
+  apiUrl: PropTypes.string
 };
 
 export default connect(

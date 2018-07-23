@@ -9,6 +9,7 @@ import App from './containers/app';
 
 import './index.css';
 import './styles/index.scss';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const target = document.querySelector('#root');
 
