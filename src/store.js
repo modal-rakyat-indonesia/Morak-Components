@@ -2,8 +2,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import { loadingBarMiddleware } from 'react-redux-loading-bar';
 import thunk from 'redux-thunk';
+import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
 import rootReducer from './reducers/index';
+import { LOGIN_SUCCESS, LOGIN_FAILURE } from './actions/middleware';
 
 export const history = createHistory();
 
@@ -35,5 +37,19 @@ const store = createStore(
   composedEnhancers,
   applyMiddleware(loadingBarMiddleware())
 );
+
+const user = Cookies.get('user');
+
+if (user) {
+  store.dispatch({
+    type: LOGIN_SUCCESS,
+    user
+  });
+} else {
+  store.dispatch({
+    type: LOGIN_FAILURE,
+    message: 'Session expired'
+  });
+}
 
 export default store;

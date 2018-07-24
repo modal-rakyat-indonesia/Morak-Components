@@ -5,6 +5,7 @@ import About from '../about';
 import Navigation from '../../components/topNavigation';
 import Meta from '../../components/meta';
 import Ribbon from '../../components/ribbon';
+import requireAuth from '../../middleware/requireAuth';
 
 const App = () => (
   <div>
@@ -16,7 +17,7 @@ const App = () => (
     <main>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about-us" component={About} />
+        <Route exact path="/about-us" component={requireAuth(About)} />
       </Switch>
     </main>
   </div>

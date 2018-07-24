@@ -49,11 +49,12 @@ class About extends React.Component {
   }
 }
 
-const mapStateToProps = ({ about }) => ({
+const mapStateToProps = ({ about, auth }) => ({
   options: about.options,
   url: about.url,
   apiUrl: about.apiUrl,
-  date: about.date
+  date: about.date,
+  authenticated: auth.authenticated
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
