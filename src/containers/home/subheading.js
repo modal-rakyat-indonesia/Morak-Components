@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Container, ListGroup, ListGroupItem } from 'reactstrap';
-import {
-  getJsonPlaceholder
-} from '../../actions/home';
+import { getJsonPlaceholder } from '../../actions/home';
 import LoadingSpinner from '../../components/loadingSpinner';
 
 class Subheading extends React.Component {
