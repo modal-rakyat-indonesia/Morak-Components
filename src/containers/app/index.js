@@ -4,10 +4,12 @@ import Home from '../home';
 import About from '../about';
 import Navigation from '../../components/topNavigation';
 import Meta from '../../components/meta';
+import Ribbon from '../../components/ribbon';
 
 const App = () => (
   <div>
     <Meta />
+    <Ribbon />
     <header>
       <Navigation />
     </header>

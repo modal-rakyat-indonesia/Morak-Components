@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Container, Button } from 'reactstrap';
+import { Container, Row, Button } from 'reactstrap';
 import Cookies from 'js-cookie';
 import CustomInput from '../../components/customInput';
 import CustomSelect from '../../components/customSelect';
@@ -30,14 +30,17 @@ class About extends React.Component {
         <p>API URL from ENV: { apiUrl }</p>
         <p>Current date and time: { date }</p>
         <p>Value set from Cookie: { Cookies.get('test') }</p>
-        <div>
-          <Button onClick={() => showSuccessNotification('Success', 'This is a success message')}>
+        <Container>
+          <Row>
+            <Button onClick={() => showSuccessNotification('Success', 'This is a success message')}>
             Toggle Success Notification
-          </Button>
-          <Button onClick={() => showErrorNotification('Error', 'This is error message with action', 'Got it!')}>
+            </Button>
+            <Button onClick={() => showErrorNotification('Error', 'This is error message with action', 'Got it!')}>
             Toggle Error Notification
-          </Button>
-        </div>
+            </Button>
+          </Row>
+        </Container>
+        <br />
         <CustomInput label="Username" id="username" type="text" />
         <CustomInput label="Password" id="password" type="password" />
         <CustomSelect label="Pilih Opsi" id="select" options={options} />

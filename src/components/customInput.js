@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { FormGroup, Label, Input } from 'reactstrap';
 import { Map } from 'immutable';
 
+import '../styles/customcontrol.scss';
+
 class CustomInput extends React.Component {
   componentWillMount() {
     const { value } = this.props;

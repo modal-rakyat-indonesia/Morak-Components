@@ -7,8 +7,6 @@ import { faStroopwafel, faChevronRight, faChevronDown } from '@fortawesome/free-
 import store, { history } from './store';
 import App from './containers/app';
 
-import './styles/index.css';
-import './styles/index.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const target = document.querySelector('#root');

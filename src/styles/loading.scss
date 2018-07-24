@@ -1,0 +1,27 @@
+$brand: #08f;
+
+.loading-spinner{
+    position: relative;
+    text-align: center;
+
+    &.small img{
+        width: 50px;
+    }
+
+    &.medium img{
+        width: 100px;
+    }
+
+    &.large img{
+        width: 150px;
+    }
+}
+
+.loading{
+    background: $brand;
+    color: $brand;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

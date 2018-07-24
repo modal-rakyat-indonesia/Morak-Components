@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../styles/loading.scss';
+
 const LoadingSpinner = ({ show, size }) => (
   show ?
     (
