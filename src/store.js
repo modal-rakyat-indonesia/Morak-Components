@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { routerMiddleware } from 'react-router-redux';
+import { routerMiddleware, push } from 'react-router-redux';
 import { loadingBarMiddleware } from 'react-redux-loading-bar';
 import thunk from 'redux-thunk';
 import Cookies from 'js-cookie';
@@ -45,6 +45,7 @@ if (user) {
     type: LOGIN_SUCCESS,
     user
   });
+  store.dispatch(push('about-us'));
 } else {
   store.dispatch({
     type: LOGIN_FAILURE,
