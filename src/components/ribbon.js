@@ -11,8 +11,8 @@ class Ribbon extends React.Component {
 
   render() {
     return this.state.isDevelopment ? (
-      <div className="box">
-        <div className="ribbon"><span>DEVELOPMENT MODE</span></div>
+      <div className="ribbon">
+        <span>DEVELOPMENT MODE</span>
       </div>
     ) : '';
   }
