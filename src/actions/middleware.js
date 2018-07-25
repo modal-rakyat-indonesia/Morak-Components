@@ -1,5 +1,6 @@
 import { push } from 'react-router-redux';
 import Cookies from 'js-cookie';
+import { setLanguage } from 'redux-i18n';
 
 export const LOGIN_REQUEST = 'middleware/LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'middleware/LOGIN_SUCCESS';
@@ -41,4 +42,9 @@ export const logoutSuccess = () => (dispatch) => {
   dispatch({
     type: LOGOUT_SUCCESS
   });
+};
+
+export const changeLanguage = lang => (dispatch) => {
+  console.warn(lang);
+  dispatch(setLanguage(lang));
 };
