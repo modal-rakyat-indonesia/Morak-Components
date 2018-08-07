@@ -45,6 +45,5 @@ export const logoutSuccess = () => (dispatch) => {
 };
 
 export const changeLanguage = lang => (dispatch) => {
-  console.warn(lang);
   dispatch(setLanguage(lang));
 };

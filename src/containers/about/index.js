@@ -8,11 +8,47 @@ import CustomInput from '../../components/customInput';
 import CustomSelect from '../../components/customSelect';
 import Meta from '../../components/meta';
 import Notification from '../../components/notification';
+import Select2 from '../../components/customSelect2';
 import { showErrorNotification, showSuccessNotification } from '../../actions/about';
+
+const fakeOptionsData = [
+  {
+    value: '1',
+    label: 'Red'
+  },
+  {
+    value: '2',
+    label: 'Blue'
+  },
+  {
+    value: '3',
+    label: 'Green'
+  },
+  {
+    value: '4',
+    label: 'Yellow'
+  },
+  {
+    value: '5',
+    label: 'White'
+  }
+];
+
+const loadOptions = (inputValue, callback) => {
+  setTimeout(() => {
+    callback(fakeOptionsData.filter(i =>
+      i.label.toLowerCase().includes(inputValue.toLowerCase())));
+  }, 1000);
+};
+
 
 class About extends React.Component {
   componentWillMount() {
     Cookies.set('test', 'Hello, this is cookies');
+  }
+
+  onSelect2Change = (newValue) => {
+    console.warn(newValue);
   }
 
   render() {
@@ -44,6 +80,37 @@ class About extends React.Component {
         <CustomInput label="Username" id="username" type="text" />
         <CustomInput label="Password" id="password" type="password" />
         <CustomSelect label="Pilih Opsi" id="select" options={options} />
+        <div className="select-2">
+          <Select2
+            label="Pilih Warna"
+            loadOptions={loadOptions}
+            disabled={false}
+            onChange={this.onSelect2Change}
+          />
+          <Select2
+            label="Pilih Warna (clearable)"
+            loadOptions={loadOptions}
+            clearable
+          />
+          <Select2
+            label="Pilih Warna (disabled)"
+            loadOptions={loadOptions}
+            disabled
+          />
+          <Select2
+            label="Pilih Warna (multi)"
+            loadOptions={loadOptions}
+            values={[{
+              value: '1',
+              label: 'Red'
+            }, {
+              value: '3',
+              label: 'Green'
+            }
+            ]}
+            multi
+          />
+        </div>
       </Container>
     );
   }
