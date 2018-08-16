@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormGroup, Label, Input } from 'reactstrap';
 import { Map } from 'immutable';
 
 import '../styles/customcontrol.scss';
@@ -37,18 +36,22 @@ class CustomInput extends React.Component {
     const attributes = Map(this.props).delete('attributes').toJS();
 
     return (
-      <FormGroup className="custom">
-        <Label className={(this.state.isActive ? 'active' : '') +
+      <div className="form-group position-relative custom">
+        <label
+          className={(this.state.isActive ? 'active' : '') +
           (this.state.isFocused ? ' focused' : '')}
+          htmlFor={attributes.id}
         >
           {attributes.label}
-        </Label>
-        <Input
+        </label>
+        <input
+          id={attributes.id}
+          className="form-control"
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         />
-      </FormGroup>
+      </div>
     );
   }
 }

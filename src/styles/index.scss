@@ -1,3 +1,5 @@
+@import "node_modules/@coreui/coreui/scss/coreui";
+
 $brand: #08f;
 
 img{
@@ -6,4 +8,101 @@ img{
         min-height: 25px;
         min-width: 145px;
     }
+}
+
+.sidebar-fixed{
+  .sidebar{
+    width: 250px;
+  }
+}
+
+.sidebar{
+    background: $brand;
+    .nav{
+      background: #fff;
+      border-right: 1px solid #efefef;
+    }
+    .nav-link{
+      color: #333;
+      &:hover{
+        background: #5f9aff;
+        color: #fff !important;
+        .nav-icon{
+          &:before{
+            color: #fff !important;
+          }
+        }
+      }
+      &.active{
+        color: #fff !important;
+        background: $brand;
+        .nav-icon{
+          &:before{
+            color: #fff !important;
+          }
+        }
+      }
+      .nav-icon{
+        color: #333;
+      }
+    }
+    .nav-dropdown{
+      &.open{
+        background: #e9edff;
+        .nav-link, .nav-icon{
+          &:before{
+            color: #333;
+          }
+          color: #333;
+        }
+      }
+    }
+  .sidebar-nav{
+    width: 250px;
+  }
+  ul.nav{
+    width: 250px;
+  }
+
+  .sidebar-minimizer{
+    background-color: #efefef;
+    &:hover{
+      background-color: $brand;
+    }
+  }
+}
+
+.sidebar-minimized{
+  .sidebar{
+    .nav{
+      >.nav-dropdown{
+        >.nav-dropdown-items{
+          background: #fff;
+          border: 0.5px solid #afafaf;
+        }
+      }
+    }
+    .nav-link{
+      &:hover{
+        background: #5f9aff;
+      }
+    }
+  }
+}
+
+.main{
+  padding: 3rem;
+  .section-title{
+    margin-bottom: 1rem;
+  }
+}
+
+html:not([dir="rtl"]){
+  .sidebar-lg-show{
+    &.sidebar-fixed{
+      .main{
+        margin-left: 250px;
+      }
+    }
+  }
 }

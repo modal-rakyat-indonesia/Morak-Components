@@ -16,6 +16,10 @@ module.exports = {
     'import/extensions': ['error', 'always', {
        js: 'never'
     }],
+    'jsx-a11y/label-has-for': [ 0, {
+      'components': [ 'Label' ],
+      'allowChildren': true
+    }],
     'no-console': ['error',  { allow: ['warn'] }],
     'comma-dangle': ['error', 'never'],
     'no-unused-vars': ['error', {

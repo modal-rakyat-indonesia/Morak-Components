@@ -1,25 +1,29 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { AppHeader } from '@coreui/react';
 import Home from '../home';
-import About from '../about';
-import Navigation from '../../components/topNavigation';
+import TextInput from '../textinput';
+import Navigation from '../../components/navbar';
+import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
 import Ribbon from '../../components/ribbon';
-import requireAuth from '../../middleware/requireAuth';
 
 const App = () => (
-  <div>
+  <div className="app">
     <Meta />
     <Ribbon />
-    <header>
+    <AppHeader fixed>
       <Navigation />
-    </header>
-    <main>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about-us" component={requireAuth(About)} />
-      </Switch>
-    </main>
+    </AppHeader>
+    <div className="app-body">
+      <Sidebar />
+      <main className="main">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/controls/input" component={TextInput} />
+        </Switch>
+      </main>
+    </div>
   </div>
 );
 
