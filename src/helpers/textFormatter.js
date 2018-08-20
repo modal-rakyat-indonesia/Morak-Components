@@ -16,17 +16,13 @@ export const distanceInWordsToNow = date => moment(date).startOf('hour').fromNow
 
 /* -- Indonesian Rupiah Style -- */
 export const IDRFormatter = number =>
-  new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0
-  }).format(number).replace(/^(\D+)/, '$1 ');
+  new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 })
+    .format(number)
+    .replace(/^(\D+)/, '$1 ');
 
 /* -- US Dollar Style -- */
 export const USDFormatter = number =>
-  new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 0
-  }).format(number).replace(/^(\D+)/, '$1 ');
+  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 })
+    .format(number)
+    .replace(/^(\D+)/, '$1 ');
 
