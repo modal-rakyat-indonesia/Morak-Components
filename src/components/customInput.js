@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Map } from 'immutable';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
 
-import '../styles/customcontrol.scss';
+import '../styles/controls/input.scss';
 
 class CustomInput extends React.Component {
   componentWillMount() {
-    const { value } = this.props;
+    const { value, type } = this.props;
     this.setState({
       isActive: value !== '' && value !== undefined,
-      isFocused: false
+      isFocused: false,
+      showPassword: false,
+      type
     });
   }
 
@@ -32,9 +36,18 @@ class CustomInput extends React.Component {
     }
   }
 
-  render() {
-    const attributes = Map(this.props).delete('attributes').toJS();
+  onShowPassword = () => {
+    const { showPassword } = this.state;
+    this.setState({
+      showPassword: !showPassword,
+      type: showPassword ? 'password' : 'text'
+    });
+  }
 
+  render() {
+    const originalType = this.props.type;
+    const attributes = Map(this.props).delete('attributes').delete('type').toJS();
+    const { showPassword, type } = this.state;
     return (
       <div className="form-group position-relative custom">
         <label
@@ -47,10 +60,22 @@ class CustomInput extends React.Component {
         <input
           id={attributes.id}
           className="form-control"
+          type={type}
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         />
+        {
+          originalType === 'password' ? (
+            <div
+              onClick={this.onShowPassword}
+              className="show-password"
+              role="presentation"
+            >
+              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} size="lg" />
+            </div>
+          ) : ''
+        }
       </div>
     );
   }
@@ -58,12 +83,14 @@ class CustomInput extends React.Component {
 
 CustomInput.defaultProps = {
   attributes: [],
-  value: undefined
+  value: undefined,
+  type: 'text'
 };
 
 CustomInput.propTypes = {
   attributes: PropTypes.array,
-  value: PropTypes.string
+  value: PropTypes.string,
+  type: PropTypes.string
 };
 
 export default CustomInput;

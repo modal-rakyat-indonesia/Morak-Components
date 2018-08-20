@@ -1,0 +1,33 @@
+.react-select__control{
+    padding-top: 7px;
+    padding-bottom: 6px;
+    background: none !important;
+    border-radius: 0px !important;
+
+    &.react-select__control--is-focused{
+      border: 0.5px solid #80bdff !important;
+      box-shadow: 0px 0px 0px 0px transparent !important;
+    }
+
+    &.react-select__control--is-disabled{
+      background: rgba(100,100,100,0.1) !important;
+    }
+
+    .react-select__indicator-separator{
+      background-color: transparent !important;
+    }
+
+    .css-va7pk8{
+      margin-left: 4px !important;
+    }
+  
+    .css-rsyb7x{
+      input {
+        margin-left: 4px !important;
+      }
+    }
+  }
+
+  .react-select__menu{
+    z-index: 999 !important;
+  }

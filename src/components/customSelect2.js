@@ -5,7 +5,8 @@ import { Map } from 'immutable';
 import { components } from 'react-select';
 import AsyncSelect from 'react-select/lib/Async';
 
-import '../styles/customcontrol.scss';
+import '../styles/controls/input.scss';
+import '../styles/controls/select2.scss';
 
 const Placeholder = props => (
   <div>

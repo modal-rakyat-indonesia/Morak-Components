@@ -4,7 +4,7 @@ import { FormGroup, Label, Input } from 'reactstrap';
 import { Map } from 'immutable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import '../styles/customcontrol.scss';
+import '../styles/controls/input.scss';
 
 class CustomSelect extends React.Component {
   componentWillMount() {

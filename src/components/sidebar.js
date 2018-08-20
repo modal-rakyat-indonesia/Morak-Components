@@ -13,7 +13,7 @@ const navigation = {
     {
       name: 'How To Use',
       url: '/how-to-use',
-      icon: 'cui-home'
+      icon: 'icon-question'
     },
     {
       name: 'Controls',
@@ -29,6 +29,11 @@ const navigation = {
           name: 'Buttons',
           url: '/controls/button',
           icon: 'cui-bolt'
+        },
+        {
+          name: 'Wizard Step',
+          url: '/controls/wizard',
+          icon: 'icon-magic-wand'
         }
       ]
     }

@@ -1,4 +1,4 @@
-$brand: #08f;
+@import '../variables.scss';
 
 .form-group{
     &.custom{
@@ -36,6 +36,7 @@ $brand: #08f;
         -moz-appearance:none; /* Firefox */
         -webkit-appearance:none; /* Safari and Chrome */
         appearance:none;
+        border-radius: 0px;
             
         &:focus{
           border-color: 1px solid $brand;
@@ -56,41 +57,20 @@ $brand: #08f;
           width: auto;
           color: #AFAFAF;
         }
+
+        .show-password{
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 2;
+          cursor: pointer;
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+          padding-right: 0.8rem;
+
+          svg{
+            color: $wolfgray;
+          }
+        }
     }
   }
-
-  // Select2
-  .react-select__control{
-    padding-top: 7px;
-    padding-bottom: 6px;
-    background: none !important;
-    border-radius: 0.25rem;
-
-    &.react-select__control--is-focused{
-      border: 0.5px solid #80bdff !important;
-      box-shadow: 0px 0px 0px 0px transparent !important;
-    }
-
-    &.react-select__control--is-disabled{
-      background: rgba(100,100,100,0.1) !important;
-    }
-
-    .react-select__indicator-separator{
-      background-color: transparent !important;
-    }
-
-    .css-va7pk8{
-      margin-left: 4px !important;
-    }
-  
-    .css-rsyb7x{
-      input {
-        margin-left: 4px !important;
-      }
-    }
-  }
-
-  .react-select__menu{
-    z-index: 999 !important;
-  }
-  // End Select2
