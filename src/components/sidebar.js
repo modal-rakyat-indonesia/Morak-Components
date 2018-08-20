@@ -36,6 +36,18 @@ const navigation = {
           icon: 'icon-magic-wand'
         }
       ]
+    },
+    {
+      name: 'Components',
+      url: '/components',
+      icon: 'icon-puzzle',
+      children: [
+        {
+          name: 'Modal',
+          url: '/components/modal',
+          icon: 'icon-event'
+        }
+      ]
     }
   ]
 };
