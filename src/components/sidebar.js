@@ -53,6 +53,18 @@ const navigation = {
           icon: 'icon-event'
         }
       ]
+    },
+    {
+      name: 'Helpers',
+      url: '/helpers',
+      icon: 'icon-pin',
+      children: [
+        {
+          name: 'Text Formatter',
+          url: '/helpers/text-formatter',
+          icon: 'icon-note'
+        }
+      ]
     }
   ]
 };

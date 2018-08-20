@@ -4,6 +4,7 @@ import { AppHeader } from '@coreui/react';
 import Home from '../home';
 import HowToUse from '../howtouse';
 import TextInput from '../textinput';
+import TextFormatter from '../textformatter';
 import Buttons from '../buttons';
 import ButtonGroup from '../buttongroup';
 import WizardStep from '../wizardstep';
@@ -31,6 +32,7 @@ const App = () => (
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/modal" component={Modal} />
           <Route exact path="/components/button-group" component={ButtonGroup} />
+          <Route exact path="/helpers/text-formatter" component={TextFormatter} />
         </Switch>
       </main>
     </div>
