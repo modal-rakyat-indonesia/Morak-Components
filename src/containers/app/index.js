@@ -4,10 +4,12 @@ import { AppHeader } from '@coreui/react';
 import Home from '../home';
 import HowToUse from '../howtouse';
 import TextInput from '../textinput';
+import modal from '../../components/modal';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
 import Ribbon from '../../components/ribbon';
+// import Modal from '../../components/modal';
 
 const App = () => (
   <div className="app">
@@ -23,6 +25,7 @@ const App = () => (
           <Route exact path="/" component={Home} />
           <Route exact path="/how-to-use" component={HowToUse} />
           <Route exact path="/controls/input" component={TextInput} />
+          <Route exact path="/components/modal" component={modal} />
         </Switch>
       </main>
     </div>

@@ -31,6 +31,18 @@ const navigation = {
           icon: 'cui-bolt'
         }
       ]
+    },
+    {
+      name: 'Components',
+      url: '/components',
+      icon: 'icon-puzzle',
+      children: [
+        {
+          name: 'Modal',
+          url: '/components/modal',
+          icon: 'icon-event'
+        }
+      ]
     }
   ]
 };
