@@ -1,5 +1,10 @@
 @import '../variables.scss';
 
+.error-msg{
+  font-size: 0.67em;
+  color: $red;
+}
+
 .form-group{
     &.custom{
       label{

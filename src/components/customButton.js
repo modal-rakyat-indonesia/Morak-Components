@@ -12,16 +12,21 @@ const CustomButton = ({
 );
 
 CustomButton.defaultProps = {
-  size: 'small',
-  type: 'default',
-  children: ''
+  size: 'medium',
+  type: 'outline',
+  children: '',
+  onClick: () => {
+  }
 };
 
 CustomButton.propTypes = {
   size: PropTypes.string,
   type: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.string
+  onClick: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ])
 };
 
 export default CustomButton;

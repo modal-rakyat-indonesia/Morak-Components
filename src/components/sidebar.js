@@ -43,6 +43,11 @@ const navigation = {
       icon: 'icon-puzzle',
       children: [
         {
+          name: 'Button Group',
+          url: '/components/button-group',
+          icon: 'icon-check'
+        },
+        {
           name: 'Modal',
           url: '/components/modal',
           icon: 'icon-event'

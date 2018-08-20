@@ -5,6 +5,7 @@ import Home from '../home';
 import HowToUse from '../howtouse';
 import TextInput from '../textinput';
 import Buttons from '../buttons';
+import ButtonGroup from '../buttongroup';
 import WizardStep from '../wizardstep';
 import modal from '../../components/modal';
 import Navigation from '../../components/navbar';
@@ -30,6 +31,7 @@ const App = () => (
           <Route exact path="/controls/buttons" component={Buttons} />
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/modal" component={modal} />
+          <Route exact path="/components/button-group" component={ButtonGroup} />
         </Switch>
       </main>
     </div>
