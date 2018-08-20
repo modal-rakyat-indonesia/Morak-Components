@@ -4,6 +4,7 @@ import { AppHeader } from '@coreui/react';
 import Home from '../home';
 import HowToUse from '../howtouse';
 import TextInput from '../textinput';
+import Buttons from '../buttons';
 import WizardStep from '../wizardstep';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
@@ -24,6 +25,7 @@ const App = () => (
           <Route exact path="/" component={Home} />
           <Route exact path="/how-to-use" component={HowToUse} />
           <Route exact path="/controls/input" component={TextInput} />
+          <Route exact path="/controls/buttons" component={Buttons} />
           <Route exact path="/controls/wizard" component={WizardStep} />
         </Switch>
       </main>

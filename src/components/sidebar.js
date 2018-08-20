@@ -27,7 +27,7 @@ const navigation = {
         },
         {
           name: 'Buttons',
-          url: '/controls/button',
+          url: '/controls/buttons',
           icon: 'cui-bolt'
         },
         {

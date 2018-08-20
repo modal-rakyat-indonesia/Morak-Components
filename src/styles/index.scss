@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import "node_modules/@coreui/coreui/scss/coreui";
+@import "variables.scss";
 
 $brand: #08f;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #343434;
+  font-size: 18px !important;
+
+  @media screen and (max-width: 1279){
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 768px){
+    font-size: 13px;
+  }
+
+  p{
+    color: $text-gray;
+  }
+}
 
 img{
     &.brand{
@@ -8,6 +30,10 @@ img{
         min-height: 25px;
         min-width: 145px;
     }
+}
+
+.navbar{
+  position: fixed !important;
 }
 
 .sidebar-fixed{
@@ -98,10 +124,20 @@ img{
 }
 
 html:not([dir="rtl"]){
+  .sidebar{
+    margin-left: -250px;
+  }
   .sidebar-lg-show{
     &.sidebar-fixed{
       .main{
         margin-left: 250px;
+
+        @media screen and (max-width: 767px) {
+          margin-left: 0px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+          margin-left: 0px;
+        }
       }
     }
   }

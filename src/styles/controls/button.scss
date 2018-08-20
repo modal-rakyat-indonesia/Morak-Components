@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+.btn{
+  &.custom-btn{
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 4px;
+    transition: 0.3s linear;
+
+    // size
+
+    &.large{
+      min-height: 52px;
+    }
+    &.medium{
+      min-height: 48px;
+      font-size: 0.78em;
+    }
+    &.small{
+      min-height: 36px;
+      font-size: 0.67em;
+    }
+    &.minimal{
+      min-height: 32px;
+      font-size: 0.67em;
+    }
+
+    // type
+    &.btn-primary{
+      background: $blue;
+      &:hover{
+        background: $blue-hover;
+      }
+    }
+    &.btn-secondary{
+      background: $yellow;
+      border: 0px;
+      color: $darkblue;
+      &:hover{
+        background: $yellow-hover;
+      }
+    }
+    &.btn-outline{
+      border: 1px solid $blue;
+      background: #fff;
+      &:hover{
+        border: 1px solid $blue-hover;
+      }
+    }
+    &.btn-dark{
+      background: $darkblue;
+      border: 0px;
+      &:hover{
+        background: $darkblue-hover;
+      }
+    }
+  }
+}
