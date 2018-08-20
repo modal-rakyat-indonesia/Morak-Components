@@ -4,13 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 class CustomButtonGroup extends React.Component {
+  componentWillMount() {
+    this.setState({
+      valid: this.props.valid
+    });
+  }
+
   componentWillReceiveProps(nextProps) {
+    if (this.props.valid !== nextProps.valid) {
+      this.setState({
+        valid: nextProps.valid
+      });
+    }
   }
 
   render() {
     const {
-      selectedValue, label, options, onSelectionClick, valid, errorMessage
+      selectedValue, label, options, onSelectionClick, errorMessage
     } = this.props;
+    const { valid } = this.state;
     return (
       <div className="btn-groups">
         <div className="custom-btn-group" role="group" aria-label={label}>
@@ -18,7 +30,13 @@ class CustomButtonGroup extends React.Component {
         options.map(option => (
           <button
             key={option.id}
-            onClick={() => onSelectionClick(option.id)}
+            onClick={() => {
+              this.setState({
+                valid: true
+              });
+              onSelectionClick(option.id);
+            }
+            }
             className={`custom-btn btn-group btn large btn-outline${valid ? '' : ' error'}`}
           >
             {option.text}
