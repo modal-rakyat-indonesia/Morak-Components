@@ -1,0 +1,109 @@
+@import "../variables.scss";
+
+@mixin toggle-mixin($size, $margin, $font-size) {
+  margin: 0 $margin;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: $size;
+  width: ($size * 1.75);
+  border-radius: $size * 2;
+
+  &:focus,
+  &.focus {
+    &.active {
+      outline: none;
+    }
+  }
+
+  > .handle {
+    position: absolute;
+    top: ($size * .25) / 2;
+    left: ($size * .25) / 2;
+    width: $size * .75;
+    height: $size * .75;
+    border-radius: $size * .75;
+    background: #fff;
+    transition: left .25s;
+  }
+
+  &.active {
+    transition: background-color .25s;
+    > .handle {
+      left: $size - (($size * .25) / 2);
+      transition: left .25s;
+    }
+    &:before {
+      opacity: .5;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.btn-sm {
+    &:before,
+    &:after {
+      line-height: $size;
+      color: #fff;
+      letter-spacing: .75px;
+      left: $size * .275;
+      width: $size * 1.55;
+    }
+    &:before {
+      text-align: right;
+    }
+    &:after {
+      text-align: left;
+      opacity: 0;
+    }
+    &.active {
+      &:before {
+        opacity: 0;
+      }
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.btn-xs {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@mixin toggle-color($color, $bg, $active-bg) {
+  color: $color;
+  background: $bg;
+  &:before,
+  &:after {
+    color: $color;
+  }
+  &.active {
+    background-color: $active-bg;
+  }
+}
+
+.custom-toggle-button{
+  text-align: center;
+  .btn-toggle{
+    @include toggle-mixin(1.5rem, 1rem, .75rem);
+    @include toggle-color($gray-toggle, $gray-toggle, $blue);
+  
+    &.btn-lg {
+      @include toggle-mixin(2.5rem, 1rem, 5rem);
+    }
+  
+    &.btn-sm{
+      @include toggle-mixin(1.5rem, .55rem, .5rem);
+    }
+  
+    &.btn-xs{
+      @include toggle-mixin(1.3rem, 0.75rem, 0px)
+    }
+  }
+}
+

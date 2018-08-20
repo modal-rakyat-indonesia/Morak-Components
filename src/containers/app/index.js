@@ -6,6 +6,7 @@ import HowToUse from '../howtouse';
 import TextInput from '../textinput';
 import Buttons from '../buttons';
 import ButtonGroup from '../buttongroup';
+import RadioButton from '../radiobutton';
 import WizardStep from '../wizardstep';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
@@ -28,6 +29,7 @@ const App = () => (
           <Route exact path="/how-to-use" component={HowToUse} />
           <Route exact path="/controls/input" component={TextInput} />
           <Route exact path="/controls/buttons" component={Buttons} />
+          <Route exact path="/controls/radio-button" component={RadioButton} />
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/modal" component={Modal} />
           <Route exact path="/components/button-group" component={ButtonGroup} />

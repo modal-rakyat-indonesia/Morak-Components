@@ -31,6 +31,11 @@ const navigation = {
           icon: 'cui-bolt'
         },
         {
+          name: 'Radio Button',
+          url: '/controls/radio-button',
+          icon: 'cui-circle-check'
+        },
+        {
           name: 'Wizard Step',
           url: '/controls/wizard',
           icon: 'icon-magic-wand'
