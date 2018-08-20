@@ -11,8 +11,8 @@ import {
 const navigation = {
   items: [
     {
-      name: 'Home',
-      url: '/',
+      name: 'How To Use',
+      url: '/how-to-use',
       icon: 'cui-home'
     },
     {
@@ -27,7 +27,7 @@ const navigation = {
         },
         {
           name: 'Buttons',
-          url: '/base/cards',
+          url: '/controls/button',
           icon: 'cui-bolt'
         }
       ]

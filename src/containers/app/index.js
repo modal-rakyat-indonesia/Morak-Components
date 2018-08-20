@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { AppHeader } from '@coreui/react';
 import Home from '../home';
+import HowToUse from '../howtouse';
 import TextInput from '../textinput';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
@@ -20,6 +21,7 @@ const App = () => (
       <main className="main">
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/how-to-use" component={HowToUse} />
           <Route exact path="/controls/input" component={TextInput} />
         </Switch>
       </main>

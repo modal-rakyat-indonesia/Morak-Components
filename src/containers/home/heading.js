@@ -2,29 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Jumbotron, Button } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Jumbotron } from 'reactstrap';
 import { getJsonPlaceholder } from '../../actions/home';
 
 const Heading = ({ getJsonPlaceholder }) => (
   <div>
     <Jumbotron>
       <h1 className="display-3">
-        Selamat datang di Modal Rakyat
+        Modal Rakyat Style Guide
       </h1>
       <p className="lead">
-        Temukan pendanaan yang Anda inginkan
+        Gunakan menu di samping untuk melakukan navigasi ke kontrol yang diinginkan
       </p>
       <hr className="my-2" />
-      <p>
-        Modal Rakyat terdaftar resmi dan diawasi langsung oleh OJK dan Kominfo
-      </p>
-      <p className="lead">
-        <Button onClick={() => getJsonPlaceholder(false)} color="primary">
-          Mulai Pendanaan&nbsp;
-          <FontAwesomeIcon icon="chevron-right" />
-        </Button>
-      </p>
     </Jumbotron>
   </div>
 );
