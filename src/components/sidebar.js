@@ -61,6 +61,11 @@ const navigation = {
           name: 'Heading',
           url: '/components/heading',
           icon: 'icon-graduation'
+        },
+        {
+          name: 'Label',
+          url: '/components/label',
+          icon: 'icon-tag'
         }
       ]
     },

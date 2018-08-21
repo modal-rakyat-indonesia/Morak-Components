@@ -21,6 +21,8 @@ const Heading = () => (
         <h3>Heading 3</h3>
         <h5>*H3 - 28 Size, 42 Line </h5>
       </Col>
+    </Row>
+    <Row className="mt-2">
       <Col xs="12" sm="12" md="12" lg="4">
         <h4>Heading 4</h4>
         <h5>*H4 - 21 Size, 32 Line </h5>

@@ -1,0 +1,111 @@
+@import '../variables.scss';
+
+.success {
+  background-color: #67e33e;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
+
+.primary {
+  background-color: $blue;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
+
+.prioritas {
+  background-color: #002462;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+  svg{
+    color: $yellow;
+  }
+}
+
+.warning {
+  background-color: $yellow;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
+
+.danger {
+  background-color: $red;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  color: $white;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
+
+.outline-primary {
+  background-color: $white;
+  border-radius: 15px;
+  border: 1px solid $blue;
+  width: 100%;
+  height: auto;
+  color: $blue;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
+
+.outline-warning {
+  background-color: $white;
+  border-radius: 15px;
+  border: 1px solid $yellow;
+  width: 100%;
+  height: auto;
+  color: $yellow;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
+
+.outline-danger {
+  background-color: $white;
+  border-radius: 15px;
+  border: 1px solid $red;
+  width: 100%;
+  height: auto;
+  color: $red;
+  font-size: 10px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 16px;
+}
