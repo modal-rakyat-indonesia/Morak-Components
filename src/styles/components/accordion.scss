@@ -1,0 +1,152 @@
+@import '../variables.scss';
+
+.custom-card{
+    margin-bottom: 1rem;
+    text-align: left;
+    border-radius: 0px !important;
+    border: 1px solid $gray-accordion;
+  
+    .card-header{
+      cursor: pointer;
+      background: #fff;
+      color: $black;
+      padding: 1.5rem;
+      border-bottom: 0px;
+      display: table;
+      &.disabled{
+        cursor: default;
+      }
+  
+      &.large{
+        min-height: 100px;
+        max-height: 100px;
+  
+        @media screen and (max-width: 767px){
+          min-height: 90px;
+          max-height: 90px;
+        }
+  
+        .card-right{
+          position: absolute;
+          right: 1.25rem;
+          top: 2.5rem;
+        }
+      }
+  
+      h5{
+        font-size: 1em;
+        max-width: 90%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .card-right{
+        float: right;
+      }
+    }
+    .card-body{
+      line-height: 1.56;
+  
+      &.team-card{
+        line-height: 1.78;
+        font-size: 0.8em;
+      }
+    }
+    .collapse{
+      display: block !important;
+      transition: 0.3s;
+      border-radius: 0px !important;
+      opacity: 0;
+      &:not(.show){
+        max-height: 0px;
+        overflow: hidden;
+        height: 0px;
+      }
+      &.show{
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+
+  // media accordion
+.custom-team{
+  max-width: 350px;
+  align-content: center;
+  overflow: hidden;
+  >img{
+    &.img-fluid{
+      width: 370px;
+      max-width: 370px;
+      padding: 0;
+      margin: 0;
+      flex-shrink: 0;
+      max-height: 100%;
+      left: -10px;
+      position: relative;
+    }
+  }
+  .custom-card{
+    .card-header{
+      padding: 1rem;
+      border-radius: 0px;
+
+      h5{
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+      p{
+        font-size: 1em;
+      }
+
+      .icon{
+        padding: 1.25rem;
+
+        svg{
+          max-width: 10px;
+        }
+      }
+    }
+  }
+}
+
+// custom media
+
+.custom-media-accordion{
+  max-width: 350px;
+  align-content: center;
+  overflow: hidden;
+  >img{
+    &.img-fluid{
+      width: 370px;
+      max-width: 370px;
+      padding: 0;
+      margin: 0;
+      flex-shrink: 0;
+      max-height: 100%;
+      left: -10px;
+      position: relative;
+    }
+  }
+  .custom-card{
+    .card-header{
+      padding: 1rem;
+      border-radius: 0px;
+
+      h5{
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+      p{
+        font-size: 1em;
+      }
+
+      .icon{
+        padding: 1.25rem;
+
+        svg{
+          max-width: 10px;
+        }
+      }
+    }
+  }
+}

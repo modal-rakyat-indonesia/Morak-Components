@@ -61,13 +61,29 @@ class ButtonGroup extends React.Component {
               options={data}
               onSelectionClick={this.onSelectionChange}
             />
-            <br />
-            <p>
-              <small>Note: Each component of button group must pass a selected value
-               to its parent
-              </small>
-            </p>
           </div>
+          <p>
+            <small>Note: Each component of button group must pass a selected value
+               to its parent
+            </small>
+          </p>
+        </div>
+        <div className="standard-button">
+          <div className="section-title">
+            <p><strong>Disabled button group</strong></p>
+            <CustomButtonGroup
+              selectedValue={selectedValue}
+              label="gender"
+              options={data}
+              disabled
+              onSelectionClick={this.onSelectionChange}
+            />
+          </div>
+          <p>
+            <small>Disabled button group will not show any option selected, even though
+                 there is any value passed to component
+            </small>
+          </p>
         </div>
         <div className="standard-button">
           <div className="section-title">

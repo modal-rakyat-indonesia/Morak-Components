@@ -48,6 +48,11 @@ const navigation = {
       icon: 'icon-puzzle',
       children: [
         {
+          name: 'Accordion',
+          url: '/components/accordion',
+          icon: 'cui-action-undo'
+        },
+        {
           name: 'Button Group',
           url: '/components/button-group',
           icon: 'icon-check'
