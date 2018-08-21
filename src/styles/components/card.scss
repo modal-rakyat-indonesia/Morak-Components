@@ -48,3 +48,47 @@
       }
     }
   }
+
+  .notification-card{
+    .card{
+      border-radius: 0px;
+      text-align: left;
+      margin-bottom: 2rem;
+      max-height: 620px;
+      max-width: 350px;
+      overflow: hidden;
+
+      .card-body{
+        padding: 14px;
+
+        &.header{
+          padding-bottom: 10px;
+          h5{
+            margin-bottom: 0px;
+          }
+        }
+
+        &.content{
+          padding-top: 10px;
+          padding-bottom: 10px;
+          p{
+            margin-bottom: 15px;
+            font-size: 0.89em;
+          }
+        }
+
+        .align-center{
+          display: table;
+          min-height: 28px;
+
+          .timestamp{
+            color: $wolfgray;
+            font-size: 0.67em;
+            margin-bottom: 0px;
+            vertical-align: middle;
+            display: table-cell;
+          }
+        }
+      }
+    }
+  }
