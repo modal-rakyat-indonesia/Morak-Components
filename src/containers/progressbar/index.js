@@ -5,16 +5,22 @@ import CustomProgressBar from '../../components/customProgressBar';
 class ProgressBar extends React.Component {
   componentWillMount() {
     this.setState({
-      progress: 10
+      progress: 10,
+      interval: setInterval(() => {
+        let { progress } = this.state;
+        progress = progress + 10 > 100 ? 10 : progress + 10;
+        this.setState({
+          progress
+        });
+      }, 500)
     });
-    setInterval(() => {
-      let { progress } = this.state;
-      progress = progress + 10 > 100 ? 10 : progress + 10;
-      this.setState({
-        progress
-      });
-    }, 500);
   }
+
+  componentWillUnmount() {
+    const { interval } = this.state;
+    clearInterval(interval);
+  }
+
   render() {
     const { progress } = this.state;
     return (

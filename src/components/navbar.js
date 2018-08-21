@@ -16,12 +16,15 @@ const Navbar = ({ logo, sygnet }) => (
     />
     <AppSidebarToggler className="d-md-down-none" display="lg" />
     <Nav className="d-md-down-none" navbar>
-      <NavItem className="text-right">
-        Modal Rakyat Style Guide
-      </NavItem>
+      <NavItem className="text-right" />
     </Nav>
     <Nav className="ml-auto" navbar>
       <AppHeaderDropdown direction="down" />
+    </Nav>
+    <Nav className="ml-auto" navbar>
+      <NavItem className="d-md-down-none">
+    Modal Rakyat Style Guide
+      </NavItem>
     </Nav>
   </React.Fragment>
 );

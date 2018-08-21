@@ -39,7 +39,7 @@ class CustomMediaAccordion extends React.Component {
       <Row>
         {
       data.map(value => (
-        <Col xs="12" sm="12" md={col} lg={col}>
+        <Col key={value.id} xs="12" sm="12" md={col} lg={col}>
           <div className="custom-media-accordion">
             <img className="img-fluid" src={value.src} alt={value.title} />
             <div className="card custom-card">
@@ -96,7 +96,7 @@ CustomMediaAccordion.defaultProps = {
 
 CustomMediaAccordion.propTypes = {
   data: PropTypes.array.isRequired,
-  col: PropTypes.number
+  col: PropTypes.string
 };
 
 export default CustomMediaAccordion;

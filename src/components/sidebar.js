@@ -71,6 +71,11 @@ const navigation = {
           name: 'Progress Bar',
           url: '/components/progress-bar',
           icon: 'icon-arrow-right-circle'
+        },
+        {
+          name: 'Tooltip',
+          url: '/components/tooltip',
+          icon: 'icon-drawer'
         }
       ]
     },

@@ -154,7 +154,9 @@ class BasicButtons extends React.Component {
                 type="primary"
                 onClick={this.onClick}
               >
+                <div>
                   Clicked {count} times
+                </div>
               </CustomButton>
             </Col>
           </Row>
