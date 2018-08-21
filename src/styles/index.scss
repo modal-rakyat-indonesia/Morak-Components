@@ -10,6 +10,42 @@ html, body {
   font-family: 'Open Sans', sans-serif !important;
   color: #343434;
   font-size: 18px !important;
+  h1 {
+    font-size: 2.83em;
+    line-height: 1.2;
+    color: $heading;
+  }
+
+  h2 {
+    font-size: 2.11em;
+    line-height: 1.21;
+    color: $heading;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: $heading;
+  }
+
+  h4 {
+    font-size: 1.17em;
+    line-height: 1.52;
+    color: $heading;
+  }
+
+  h5 {
+    font-size: 0.89em;
+    line-height: 1.63;
+    color: $heading;
+  }
+
+  .subheading {
+    font-size: 1.05em;
+    font-weight: 200;
+    line-height: 1.53;
+    color: $heading;
+  }
 
   @media screen and (max-width: 1279){
     font-size: 14px;

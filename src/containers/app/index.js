@@ -14,6 +14,7 @@ import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
 import Ribbon from '../../components/ribbon';
 import Modal from '../modal';
+import Heading from '../heading';
 
 const App = () => (
   <div className="app">
@@ -34,6 +35,7 @@ const App = () => (
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/modal" component={Modal} />
           <Route exact path="/components/button-group" component={ButtonGroup} />
+          <Route exact path="/components/heading" component={Heading} />
           <Route exact path="/helpers/text-formatter" component={TextFormatter} />
         </Switch>
       </main>

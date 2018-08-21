@@ -56,6 +56,11 @@ const navigation = {
           name: 'Modal',
           url: '/components/modal',
           icon: 'icon-event'
+        },
+        {
+          name: 'Heading',
+          url: '/components/heading',
+          icon: 'icon-graduation'
         }
       ]
     },
