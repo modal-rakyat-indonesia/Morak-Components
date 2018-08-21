@@ -58,9 +58,19 @@ const navigation = {
           icon: 'icon-check'
         },
         {
+          name: 'Media Object',
+          url: '/components/media',
+          icon: 'icon-picture'
+        },
+        {
           name: 'Modal',
           url: '/components/modal',
           icon: 'icon-event'
+        },
+        {
+          name: 'Progress Bar',
+          url: '/components/progress-bar',
+          icon: 'icon-arrow-right-circle'
         }
       ]
     },

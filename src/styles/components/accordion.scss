@@ -112,13 +112,14 @@
 // custom media
 
 .custom-media-accordion{
-  max-width: 350px;
+  max-width: 100%;
   align-content: center;
   overflow: hidden;
+  border: 1px solid $gray-accordion;
   >img{
     &.img-fluid{
-      width: 370px;
-      max-width: 370px;
+      width: 105%;
+      max-width: 105%;
       padding: 0;
       margin: 0;
       flex-shrink: 0;
@@ -128,6 +129,9 @@
     }
   }
   .custom-card{
+    border: none;
+    border-top: 1px solid $gray-accordion;
+    margin-bottom: 0px;
     .card-header{
       padding: 1rem;
       border-radius: 0px;

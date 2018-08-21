@@ -31,6 +31,7 @@ Accordion
             <p><strong>Accordion with media</strong></p>
             <small>col=&#34;6&#34;</small>
             <CustomMediaAccordion data={accordionData1} col="6" />
+            <br />
             <small>col=&#34;4&#34;</small>
             <CustomMediaAccordion data={accordionData2} col="4" />
           </div>

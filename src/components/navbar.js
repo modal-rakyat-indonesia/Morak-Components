@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Nav, NavItem } from 'reactstrap';
 import { AppHeaderDropdown, AppNavbarBrand, AppSidebarToggler } from '@coreui/react';
 
 const Navbar = ({ logo, sygnet }) => (
@@ -16,8 +16,8 @@ const Navbar = ({ logo, sygnet }) => (
     />
     <AppSidebarToggler className="d-md-down-none" display="lg" />
     <Nav className="d-md-down-none" navbar>
-      <NavItem className="px-3">
-        <NavLink href="/">Dashboard</NavLink>
+      <NavItem className="text-right">
+        Modal Rakyat Style Guide
       </NavItem>
     </Nav>
     <Nav className="ml-auto" navbar>

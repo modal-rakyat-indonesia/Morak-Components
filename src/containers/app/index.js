@@ -10,6 +10,8 @@ import ButtonGroup from '../buttongroup';
 import RadioButton from '../radiobutton';
 import WizardStep from '../wizardstep';
 import Accordion from '../accordion';
+import Media from '../media';
+import ProgressBar from '../progressbar';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
@@ -34,7 +36,9 @@ const App = () => (
           <Route exact path="/controls/radio-button" component={RadioButton} />
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/accordion" component={Accordion} />
+          <Route exact path="/components/media" component={Media} />
           <Route exact path="/components/modal" component={Modal} />
+          <Route exact path="/components/progress-bar" component={ProgressBar} />
           <Route exact path="/components/button-group" component={ButtonGroup} />
           <Route exact path="/helpers/text-formatter" component={TextFormatter} />
         </Switch>
