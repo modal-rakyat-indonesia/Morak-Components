@@ -10,7 +10,7 @@ const Label = () => (
     <h2>
       Custom Label
     </h2>
-    <p>This page contains Modal Rakyat standardized style for sutom.
+    <p>This page contains Modal Rakyat standardized style for custom label.
     </p>
     <Row>
       <Col xs="12" sm="12" md="12" lg="2">
