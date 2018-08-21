@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.basic-card{
+    .card{
+      border-radius: 0px;
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      margin-bottom: 2rem;
+      max-height: 620px;
+      overflow: hidden;
+  
+      .card-body{
+        padding: 0;
+      }
+    }
+  }

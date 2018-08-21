@@ -58,6 +58,11 @@ const navigation = {
           icon: 'icon-check'
         },
         {
+          name: 'Cards',
+          url: '/components/cards',
+          icon: 'icon-map'
+        },
+        {
           name: 'Media Object',
           url: '/components/media',
           icon: 'icon-picture'
