@@ -57,32 +57,34 @@ class TextInput extends React.Component {
             </div>
             <CustomInput label="Username" id="username" type="text" />
             <CustomInput label="Password" id="password" type="password" />
+            <CustomInput label="Disabled" id="disabled-text" type="text" disabled />
           </Col>
           <Col xs="12" sm="12" md="12" lg="6">
             <div className="section-title">
               <h4>Dropdown Single/Multiple with Options</h4>
               <p>Multiple or single select dropdown with and without search function</p>
             </div>
-            <CustomSelect label="Pilih Opsi" id="select" options={options} />
+            <CustomSelect label="Select An Option" id="select" options={options} />
+            <CustomSelect label="Disabled" id="select" options={options} disabled />
             <div className="select-2">
               <Select2
-                label="Pilih Warna"
+                label="Choose A Color"
                 loadOptions={loadOptions}
                 disabled={false}
                 onChange={this.onSelect2Change}
               />
               <Select2
-                label="Pilih Warna (clearable)"
+                label="Choose A Color (Clearable)"
                 loadOptions={loadOptions}
                 clearable
               />
               <Select2
-                label="Pilih Warna (disabled)"
+                label="Choose A Color (Disabled)"
                 loadOptions={loadOptions}
                 disabled
               />
               <Select2
-                label="Pilih Warna (multi)"
+                label="Choose A Color (Multiple)"
                 loadOptions={loadOptions}
                 values={[{
                   value: '1',

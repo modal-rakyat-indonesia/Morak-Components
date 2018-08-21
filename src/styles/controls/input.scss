@@ -52,6 +52,10 @@
         &:not([size]):not([multiple]){
           height: auto;
         }
+
+        &:disabled{
+          background: rgba(100, 100, 100, 0.1);
+        }
       }
     
         .arrow-down{
