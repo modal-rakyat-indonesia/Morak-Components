@@ -32,9 +32,7 @@ export default class TextFormatter extends Component {
     const { listData } = this.state;
     return (
       <div>
-        <h2>
-      Text Formatter
-        </h2>
+        <h2>Text Formatter</h2>
         <p>This page contains Modal Rakyat standardized function for formatting data/time and text.
         </p>
         <table className="table">
