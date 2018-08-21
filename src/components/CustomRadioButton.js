@@ -20,8 +20,6 @@ export default class CustomRadioButton extends Component {
     const {
       inputList, selectedValue, handleChange
     } = this.props;
-    // eslint-disable-next-line
-    {console.log(this.props)}
     const { isValid } = this.state;
     return (
       <div>
