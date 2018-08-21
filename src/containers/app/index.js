@@ -19,6 +19,8 @@ import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
 import Ribbon from '../../components/ribbon';
 import Modal from '../modal';
+import Heading from '../heading';
+import Label from '../label';
 
 const App = () => (
   <div className="app">
@@ -44,6 +46,8 @@ const App = () => (
           <Route exact path="/components/progress-bar" component={ProgressBar} />
           <Route exact path="/components/tooltip" component={Tooltip} />
           <Route exact path="/components/button-group" component={ButtonGroup} />
+          <Route exact path="/components/heading" component={Heading} />
+          <Route exact path="/components/label" component={Label} />
           <Route exact path="/helpers/text-formatter" component={TextFormatter} />
         </Switch>
       </main>

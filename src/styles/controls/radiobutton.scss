@@ -1,0 +1,81 @@
+@import '../variables.scss';
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.radio-disable {
+    cursor: not-allowed;
+  }
+
+  /* On mouse-over, add a blue border and white background color */
+  &:hover {
+    .radio-checkmark {
+      background-color: $white;
+      border: solid 1px $blue;
+    }
+    
+  }
+  
+  /* Hide the browser's default radio button */
+  input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    
+    &:disabled {
+      ~ .radio-checkmark {
+        background-color: $wolfgray;
+        cursor: not-allowed;
+        border: none;
+      }
+    }
+
+    &:checked {
+      ~ .radio-checkmark {
+        background-color: $white;
+        border: solid 1px $blue;
+        &:after{
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* Create a custom radio button */
+  .radio-checkmark {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: $gray-wizard;
+    border-radius: 50%;
+    /* Style the indicator (dot/circle) */
+    &:after{
+      content: "";
+      position: absolute;
+      display: none;
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $blue;
+    }
+
+    &.radio-error {
+      border: solid 1px $red;
+      background-color: $white;
+    }
+  }
+  
+}

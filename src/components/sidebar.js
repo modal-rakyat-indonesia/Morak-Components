@@ -73,6 +73,16 @@ const navigation = {
           icon: 'icon-event'
         },
         {
+          name: 'Heading',
+          url: '/components/heading',
+          icon: 'icon-graduation'
+        },
+        {
+          name: 'Label',
+          url: '/components/label',
+          icon: 'icon-tag'
+        },
+        {
           name: 'Progress Bar',
           url: '/components/progress-bar',
           icon: 'icon-arrow-right-circle'
