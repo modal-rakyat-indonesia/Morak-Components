@@ -24,10 +24,15 @@ class CustomTooltip extends React.Component {
       <div id={`tooltip-${children.props.id}`} className="tooltip-custom">
         {children}
         <Tooltip
+          style={{
+        fontFamily: 'Titillium Web, sans-serif',
+        fontSize: '14px'
+        }}
           placement={placement}
           isOpen={open}
           target={`tooltip-${children.props.id}`}
           toggle={this.onToggle}
+          autohide={false}
         >
           {tooltip}
         </Tooltip>
