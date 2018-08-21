@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Card, CardBody } from 'reactstrap';
+import { Row, Col, Card, CardBody } from 'reactstrap';
 
 import '../styles/components/card.scss';
 
@@ -11,16 +11,22 @@ const CustomBasicCard = ({
 }) => (
   <div className="basic-card">
     <Card>
-      <CardBody>
-        <h5>{header}</h5>
-        <button className="btn btn-default btn-next" onClick={action}>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
+      <CardBody className="header">
+        <Row>
+          <Col xs="10">
+            <h5>{header}</h5>
+          </Col>
+          <Col className="text-right" xs="2">
+            <button className="btn btn-default btn-next" onClick={action}>
+              <FontAwesomeIcon icon={faChevronRight} size="xs" />
+            </button>
+          </Col>
+        </Row>
       </CardBody>
-      <CardBody>
+      <CardBody className="content">
         <p>{content}</p>
       </CardBody>
-      <CardBody>
+      <CardBody className="footer">
         {footer}
       </CardBody>
     </Card>

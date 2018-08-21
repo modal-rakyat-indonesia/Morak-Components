@@ -3,14 +3,48 @@
 .basic-card{
     .card{
       border-radius: 0px;
-      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
       text-align: left;
       margin-bottom: 2rem;
       max-height: 620px;
+      max-width: 350px;
       overflow: hidden;
   
       .card-body{
-        padding: 0;
+        padding: 14px;
+
+        &.header, &.content{
+          border-bottom: 1px solid #ebebf3;
+        
+          h5{
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 0.89em;
+          }
+        }
+
+        &.content{
+          min-height: 125px;
+        }
+
+        &.footer{
+          background: $gray-card-button-footer;
+          font-size: 0.89em;
+        }
+
+        .btn-next {
+          width: 25px;
+          height: 25px;
+          padding: 0;
+          border: 1px solid $gray-card-button-border;
+          background: $gray-card-button-background;
+          svg{
+            color: $gray-card-button-text;
+            max-width: 6px;
+            position: relative;
+            top: -3px;
+          }
+        }
       }
     }
   }
