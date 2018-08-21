@@ -1,0 +1,39 @@
+@import '../variables.scss';
+
+@mixin size-mixin($size) {
+  height: $size;
+  border-radius: $size;
+  .progress-bar{
+    border-radius: $size;
+  }
+}
+
+.progress{
+    &.custom {
+      background: $gray-wizard;
+  
+      .progress-bar{
+        transition: 0.3s;
+        background-color: $lightgreen;
+        &.danger{
+          background-color: $red;
+        }
+        &.warning{
+          background-color: $yellow;
+        }
+        &.complete{
+          background-color: $lightgreen;
+        }
+      }
+    }
+
+    &.small{
+      @include size-mixin(8px);
+    }
+    &.medium{
+      @include size-mixin(15px);
+    }
+    &.large{
+      @include size-mixin(20px);
+    }
+  }

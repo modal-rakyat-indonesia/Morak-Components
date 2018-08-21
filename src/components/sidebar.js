@@ -48,9 +48,24 @@ const navigation = {
       icon: 'icon-puzzle',
       children: [
         {
+          name: 'Accordion',
+          url: '/components/accordion',
+          icon: 'cui-action-undo'
+        },
+        {
           name: 'Button Group',
           url: '/components/button-group',
           icon: 'icon-check'
+        },
+        {
+          name: 'Cards',
+          url: '/components/cards',
+          icon: 'icon-map'
+        },
+        {
+          name: 'Media Object',
+          url: '/components/media',
+          icon: 'icon-picture'
         },
         {
           name: 'Modal',
@@ -66,6 +81,16 @@ const navigation = {
           name: 'Label',
           url: '/components/label',
           icon: 'icon-tag'
+        },
+        {
+          name: 'Progress Bar',
+          url: '/components/progress-bar',
+          icon: 'icon-arrow-right-circle'
+        },
+        {
+          name: 'Tooltip',
+          url: '/components/tooltip',
+          icon: 'icon-drawer'
         }
       ]
     },

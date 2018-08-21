@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormGroup, Label, Input } from 'reactstrap';
+import { FormGroup, Label } from 'reactstrap';
 import { Map } from 'immutable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import '../styles/controls/input.scss';
 
@@ -47,8 +48,8 @@ class CustomSelect extends React.Component {
         >
           {attributes.label}
         </Label>
-        <Input
-          type="select"
+        <select
+          className="form-control"
           {...attributes}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
@@ -57,8 +58,8 @@ class CustomSelect extends React.Component {
           {options.map((value, index) => (
             <option key={value.id} value={value.id}>{value.text}</option>
           ))}
-        </Input>
-        <FontAwesomeIcon className="arrow-down" icon="chevron-down" />
+        </select>
+        <FontAwesomeIcon className="arrow-down" icon={faChevronDown} />
 
       </FormGroup>
     );

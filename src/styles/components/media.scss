@@ -1,0 +1,56 @@
+@import '../variables.scss';
+
+.custom-media{
+    padding-bottom: 2rem;
+    text-align: center;
+    .custom-media-img{
+      margin-bottom: 1rem;
+      img{
+        max-width: 150px;
+      }
+    }
+    .title{
+      font-size: 1.5em;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle{
+      font-size: 0.75em;
+      color: $gray-1;
+    }
+    .description{
+      line-height: 1.65;
+    }
+  }
+  
+  .custom-media-h{
+    padding-top: 3rem;
+    .media-left{
+      min-width: 140px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      
+      img{
+        max-width: 150px;
+  
+        @media screen and (min-width: 768px) and (max-width: 1279px){
+          max-width: 100px;
+        }
+      }
+  
+      @media screen and (max-width: 767px){
+        img{
+          max-width: 100px;
+        }
+        min-width: 100px;
+      }
+    }
+    .media-body{
+      text-align: left;
+      padding-left: 2rem;
+      .media-heading{
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+    }
+}

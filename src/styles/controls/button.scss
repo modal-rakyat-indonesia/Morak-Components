@@ -55,6 +55,16 @@
         background: $darkblue-hover;
       }
     }
+
+    &:disabled{
+      color: $gray-disabled-text !important;
+      border: 1px solid $gray-disabled-text !important;
+      cursor: default;
+      background: #fff;
+      &:hover{
+        background: #fff;
+      }
+    }
   }
 }
 

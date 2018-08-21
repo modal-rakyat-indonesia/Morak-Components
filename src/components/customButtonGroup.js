@@ -20,7 +20,7 @@ class CustomButtonGroup extends React.Component {
 
   render() {
     const {
-      selectedValue, label, options, onSelectionClick, errorMessage
+      selectedValue, label, options, onSelectionClick, errorMessage, disabled
     } = this.props;
     const { valid } = this.state;
     return (
@@ -38,9 +38,10 @@ class CustomButtonGroup extends React.Component {
             }
             }
             className={`custom-btn btn-group btn large btn-outline${valid ? '' : ' error'}`}
+            disabled={disabled}
           >
             {option.text}
-            {selectedValue === option.id ? (
+            {selectedValue === option.id && !disabled ? (
               <div className="btn-group-check">
                 <div className="btn-group-check-container">
                   <FontAwesomeIcon icon={faCheckCircle} size="sm" />
@@ -65,7 +66,8 @@ class CustomButtonGroup extends React.Component {
 
 CustomButtonGroup.defaultProps = {
   valid: true,
-  errorMessage: 'Required field!'
+  errorMessage: 'Required field!',
+  disabled: false
 };
 
 CustomButtonGroup.propTypes = {
@@ -77,7 +79,8 @@ CustomButtonGroup.propTypes = {
   ]).isRequired,
   onSelectionClick: PropTypes.func.isRequired,
   valid: PropTypes.bool,
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 export default CustomButtonGroup;

@@ -58,13 +58,14 @@ class CustomToggleButton extends React.Component {
 CustomToggleButton.defaultProps = {
   size: 'medium',
   onToggle: () => {
-  }
+  },
+  active: false
 };
 
 CustomToggleButton.propTypes = {
   defaultTitle: PropTypes.string.isRequired,
   toggledTitle: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
+  active: PropTypes.bool,
   size: PropTypes.string,
   onToggle: PropTypes.func
 };

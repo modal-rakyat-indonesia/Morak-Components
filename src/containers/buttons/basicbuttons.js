@@ -123,6 +123,29 @@ class BasicButtons extends React.Component {
               </CustomButton>
             </Col>
           </Row>
+          <p><strong>Disabled button</strong></p>
+          <Row>
+            <Col xs="3">
+              <CustomButton size="minimal" type="primary" disabled>
+              Minimal
+              </CustomButton>
+            </Col>
+            <Col xs="3">
+              <CustomButton size="small" type="primary" disabled>
+              Small
+              </CustomButton>
+            </Col>
+            <Col xs="3">
+              <CustomButton size="medium" type="primary" disabled>
+              Medium
+              </CustomButton>
+            </Col>
+            <Col xs="3">
+              <CustomButton size="large" type="primary" disabled>
+              Large
+              </CustomButton>
+            </Col>
+          </Row>
           <p><strong>Button with action on click</strong></p>
           <Row className="mt-3">
             <Col xs="3">
@@ -131,7 +154,9 @@ class BasicButtons extends React.Component {
                 type="primary"
                 onClick={this.onClick}
               >
+                <div>
                   Clicked {count} times
+                </div>
               </CustomButton>
             </Col>
           </Row>
