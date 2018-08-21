@@ -2,7 +2,7 @@ import moment from 'moment';
 import 'moment/locale/id';
 
 /* ----------- example format date: 19 Januari 2008 ----------- */
-export const standartDate = date => moment(date).format('DD MMMM YYYY');
+export const standardDate = date => moment(date).format('DD MMMM YYYY');
 
 /* ----------- example format date: Januari 19, 2008 ----------- */
 export const fullMonthName = date => moment(date).format('MMMM DD, YYYY');

@@ -6,7 +6,7 @@ export default class CustomRadio extends Component {
     super(props);
     this.state = {
       required: true,
-      selectedValue: ''
+      selectedValue: 'checked'
     };
   }
   handleOptionChange = ({ target }) => {
@@ -18,26 +18,32 @@ export default class CustomRadio extends Component {
     const { required, selectedValue } = this.state;
     const dataInput = [
       {
-        id: 'fruit',
-        value: 'strawberry',
-        label: 'Strawberry',
-        disabled: false
+        id: '1',
+        value: 'checked',
+        label: 'Checked',
+        isDisabled: false
       },
       {
-        id: 'flower',
-        value: 'rose',
-        label: 'Rose',
-        disabled: false
+        id: '2',
+        value: 'unchecked',
+        label: 'Unchecked',
+        isDisabled: false
       },
       {
-        id: 'animal',
-        value: 'tiger',
-        label: 'Tiger',
-        disabled: false
+        id: '3',
+        value: 'disabled',
+        label: 'Disable',
+        isDisabled: true
       }
     ];
     return (
       <div>
+        <h4>Custom Radio Button</h4>
+        <p>Contains basic functionality of radio button</p>
+        <p>
+          <strong>Customize radio button</strong><br />
+          <small>Specify behavior for radio button when checked, unchecked, hover & disable</small>
+        </p>
         <CustomRadioButton
           isRequired={required}
           inputList={dataInput}

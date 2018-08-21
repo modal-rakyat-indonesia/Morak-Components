@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { standartDate, fullMonthName, initialMonthName, distanceInWordsToNow, IDRFormatter, USDFormatter } from '../../helpers/textFormatter';
+import { standardDate, fullMonthName, initialMonthName, distanceInWordsToNow, IDRFormatter, USDFormatter } from '../../helpers/textFormatter';
 
 export default class TextFormatter extends Component {
   constructor() {
@@ -7,7 +7,7 @@ export default class TextFormatter extends Component {
     this.state = {
       listData: [
         {
-          data: '2018-08-20 20:00:00', functionName: 'standartDate()', action: standartDate('2018-08-20 20:00:00')
+          data: '2018-08-20 20:00:00', functionName: 'standardDate()', action: standardDate('2018-08-20 20:00:00')
         },
         {
           data: '2018-08-20 20:00:00', functionName: 'fullMonthName()', action: fullMonthName('2018-08-20 20:00:00')
