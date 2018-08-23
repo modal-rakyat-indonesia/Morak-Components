@@ -7,6 +7,7 @@ import TextInput from '../textinput';
 import TextFormatter from '../textformatter';
 import Buttons from '../buttons';
 import ButtonGroup from '../buttongroup';
+import Pagination from '../pagination';
 import RadioButton from '../radiobutton';
 import WizardStep from '../wizardstep';
 import Accordion from '../accordion';
@@ -37,6 +38,7 @@ const App = () => (
           <Route exact path="/how-to-use" component={HowToUse} />
           <Route exact path="/controls/input" component={TextInput} />
           <Route exact path="/controls/buttons" component={Buttons} />
+          <Route exact path="/controls/pagination" component={Pagination} />
           <Route exact path="/controls/radio-button" component={RadioButton} />
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/accordion" component={Accordion} />

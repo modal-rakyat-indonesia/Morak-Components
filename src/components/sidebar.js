@@ -31,6 +31,11 @@ const navigation = {
           icon: 'cui-bolt'
         },
         {
+          name: 'Pagination',
+          url: '/controls/pagination',
+          icon: 'cui-bookmark'
+        },
+        {
           name: 'Radio Button',
           url: '/controls/radio-button',
           icon: 'cui-circle-check'
