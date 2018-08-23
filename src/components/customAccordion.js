@@ -60,7 +60,7 @@ class CustomAccordion extends React.Component {
             className={`collapse${value.isOpen ? ' show' : ''}`}
             aria-labelledby={value.id}
           >
-            <CardBody dangerouslySetInnerHTML={{ __html: value.description }} />
+            <CardBody>{value.description}</CardBody>
           </div>
         </div>
       ))

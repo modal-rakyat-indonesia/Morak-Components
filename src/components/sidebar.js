@@ -53,6 +53,11 @@ const navigation = {
           icon: 'cui-action-undo'
         },
         {
+          name: 'Nested Accordion',
+          url: '/components/nested-accordion',
+          icon: 'cui-action-undo'
+        },
+        {
           name: 'Button Group',
           url: '/components/button-group',
           icon: 'icon-check'
