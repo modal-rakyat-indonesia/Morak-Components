@@ -2,8 +2,9 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import CustomBasicCard from '../../components/customBasicCard';
 import CustomNotificationCard from '../../components/customNotificationCard';
-import ListCardWithTimeData from '../../components/customListData';
+import { listBasicCard, listCardWithTimeData, listCardFooter } from '../../components/customListData';
 import CustomListCardWithTime from '../../components/customListCardWithTime';
+import CustomListCard from '../../components/customListCard';
 
 const Cards = () => (
   <div>
@@ -40,12 +41,22 @@ const Cards = () => (
         />
       </Col>
       <Col xs="12" sm="12" md="12" lg="6">
-        <p><strong>List Card with Time</strong><br />
-          <small>Contains card with header and list of contents, sorted chronologically.</small>
+        <p><strong>Basic List Card</strong><br />
+          <small>Contains card with header and list of contents.</small>
         </p>
         <CustomListCardWithTime
           header="Heading"
-          contents={ListCardWithTimeData}
+          contents={listCardWithTimeData}
+        />
+      </Col>
+      <Col xs="12" sm="12" md="12" lg="6">
+        <p><strong>List Card with Time</strong><br />
+          <small>Contains card with header and list of contents, sorted chronologically.</small>
+        </p>
+        <CustomListCard
+          header="Heading"
+          contents={listBasicCard}
+          footer={listCardFooter}
         />
       </Col>
     </Row>

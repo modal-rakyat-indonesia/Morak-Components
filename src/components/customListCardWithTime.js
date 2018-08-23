@@ -62,7 +62,8 @@ CustomListCardWithTime.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired
+    amount: PropTypes.number.isRequired,
+    action: PropTypes.func
   })).isRequired
 };
 

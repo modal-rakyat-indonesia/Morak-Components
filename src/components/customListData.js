@@ -1,4 +1,6 @@
-const listCardWithTimeData = [{
+import { IDRFormatter } from '../helpers/textFormatter';
+
+export const listCardWithTimeData = [{
   id: 1,
   date: '2018-03-20 10:00:00',
   title: 'Pendanaan Baru',
@@ -53,5 +55,34 @@ const listCardWithTimeData = [{
 }
 ];
 
-export default listCardWithTimeData;
+export const listBasicCard = [{
+  id: 1,
+  title: 'Pendanaan Baru',
+  content: 17
+}, {
+  id: 2,
+  title: 'Total Nilai Pendanaan',
+  content: IDRFormatter(17650000)
+}, {
+  id: 3,
+  title: 'Range Tenor',
+  content: '30-120 Hari'
+}, {
+  id: 4,
+  title: 'Total Pendapatan',
+  content: IDRFormatter(9550000)
+}, {
+  id: 5,
+  title: 'Rata-rata Imbal Balik',
+  content: '13 Persen'
+}
+];
+
+export const listCardFooter = {
+  title: '7 Peluang Pendanaan!',
+  content: 'Lihat Peluang',
+  action: () => {
+    console.warn('opportunity clicked');
+  }
+};
 

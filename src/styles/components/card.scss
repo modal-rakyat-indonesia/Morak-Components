@@ -94,6 +94,82 @@
     }
   }
 
+  .basic-list-card{
+    .card{
+      border-radius: 0px;
+      text-align: left;
+      margin-bottom: 2rem;
+      max-height: 620px;
+      max-width: 350px;
+      overflow: hidden;
+    }
+
+    .card-body{
+      &.header{
+        padding: 14px;
+        background: $gray-list-basic-list-card;
+        border: 1px solid $gray-list-card-border;
+        h5{
+          margin-bottom: 0px;
+        }
+      }
+
+      &.content{
+        padding: 0;
+        padding-bottom: 14px;
+        padding-top: 14px;
+        margin-left: 14px;
+        margin-right: 14px;
+        border-bottom: 1px solid $gray-card-button-border;
+
+        &:nth-last-child(2){
+          border-bottom: none;
+        }
+        p{
+          margin-bottom: 0px;
+          font-size: 0.89em;
+        }
+        .amount{
+          font-size: 0.89em;
+          color: $text-gray;
+        }
+      }
+
+      &.footer{
+        border: 1px solid $gray-disabled-border;
+        background: $gray-card-button-footer;
+        padding: 14px;
+        font-size: 0.89em;
+
+        button{
+          font-size: 0.89em;
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+        p{
+          margin-bottom: 0px;
+          margin-top: 7px;
+        }
+      }
+
+      .row{
+        line-height: 1.2;
+
+        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+        .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+          &:first-child{
+            padding-left: 14px;
+          }
+          &:last-child{
+            padding-right: 14px;
+          }
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
   .list-card-with-time{
     .card{
       border-radius: 0px;
@@ -173,7 +249,7 @@
         }
 
         .amount{
-          padding-top: 6px;
+          padding-top: 8px;
           font-size: 0.89em;
           .debit{
             color: $red;
