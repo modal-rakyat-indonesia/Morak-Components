@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
-import CustomAccordion from '../../components/customAccordion';
+import NestedAccordion from '../../components/NestedAccordion';
+import '../../styles/components/nestedaccordion.scss';
 
-
-export default class NestedAccordion extends Component {
+export default class ImplementNestedAccordion extends Component {
   componentWillMount() {
     this.setState({
       accordionData: [
@@ -49,11 +49,15 @@ export default class NestedAccordion extends Component {
 
     const description =
       (
-        <ul>
+        <ol className="list-group vertical-steps">
           {
-            ListDescription.map(desc => (<li key={desc.id}>{desc.text}</li>))
+            ListDescription.map(desc => (
+              <li className="list-group-item vertical-step-content" key={desc.id}>
+                <p>{desc.text}</p>
+              </li>
+            ))
           }
-        </ul>
+        </ol>
       );
     return description;
   }
@@ -65,7 +69,7 @@ export default class NestedAccordion extends Component {
         <Row>
           <Col>
             <div>
-              <CustomAccordion data={accordionData} size="medium" />
+              <NestedAccordion data={accordionData} size="medium" />
             </div>
           </Col>
         </Row>

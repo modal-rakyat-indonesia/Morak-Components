@@ -21,7 +21,7 @@ import Ribbon from '../../components/ribbon';
 import Modal from '../modal';
 import Heading from '../heading';
 import Label from '../label';
-import NestedAccordion from '../nestedAccordion';
+import ImplementNestedAccordion from '../nestedAccordion';
 
 const App = () => (
   <div className="app">
@@ -41,7 +41,7 @@ const App = () => (
           <Route exact path="/controls/radio-button" component={RadioButton} />
           <Route exact path="/controls/wizard" component={WizardStep} />
           <Route exact path="/components/accordion" component={Accordion} />
-          <Route exact path="/components/nested-accordion" component={NestedAccordion} />
+          <Route exact path="/components/nested-accordion" component={ImplementNestedAccordion} />
           <Route exact path="/components/cards" component={Cards} />
           <Route exact path="/components/media" component={Media} />
           <Route exact path="/components/modal" component={Modal} />

@@ -6,8 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { List } from 'immutable';
 
 import '../styles/components/accordion.scss';
+import '../styles/components/nestedaccordion.scss';
 
-class CustomAccordion extends React.Component {
+class NestedAccordion extends React.Component {
   componentWillMount() {
     this.setState({
       data: this.props.data
@@ -36,13 +37,13 @@ class CustomAccordion extends React.Component {
 
   render() {
     const { data } = this.state;
-    const { size, customClass } = this.props;
+    const { size } = this.props;
     return (
       data.map(value => (
-        <div key={value.id} className={`card custom-card ${customClass}`}>
+        <div key={value.id} className="card custom-card custom-nested-accordion">
           <div
             id={`btn-toggler-${value.id}`}
-            className={`card-header ${size}`}
+            className={`card-header ${value.isOpen ? 'header-nested-accordion' : 'header-nested-accordion-noborder'} ${size}`}
             role="presentation"
             onClick={id => this.onAccordionClick(value.id)}
           >
@@ -68,15 +69,13 @@ class CustomAccordion extends React.Component {
   }
 }
 
-CustomAccordion.defaultProps = {
-  size: 'medium',
-  customClass: ''
+NestedAccordion.defaultProps = {
+  size: 'medium'
 };
 
-CustomAccordion.propTypes = {
+NestedAccordion.propTypes = {
   data: PropTypes.array.isRequired,
-  size: PropTypes.string,
-  customClass: PropTypes.string
+  size: PropTypes.string
 };
 
-export default CustomAccordion;
+export default NestedAccordion;
