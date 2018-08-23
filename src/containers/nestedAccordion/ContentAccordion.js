@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import NestedAccordion from '../../components/NestedAccordion';
 
 import '../../styles/components/nestedaccordion.scss';
+import '../../styles/components/customalert.scss';
 
 export default class ImplementNestedAccordion extends Component {
   componentWillMount() {
@@ -52,15 +53,21 @@ export default class ImplementNestedAccordion extends Component {
 
     const description =
       (
-        <ol className="list-group vertical-steps">
-          {
+        <div>
+          <ol className="list-group vertical-steps">
+            {
             ListDescription.map(desc => (
               <li className="list-group-item vertical-step-content" key={desc.id}>
                 <p>{desc.text}</p>
               </li>
             ))
           }
-        </ol>
+          </ol>
+          <div className="alert alert-warning custom-alert" role="alert">
+        This is a warning alert—check it out!
+          </div>
+        </div>
+
       );
     return description;
   }
@@ -69,11 +76,7 @@ export default class ImplementNestedAccordion extends Component {
     const { accordionData } = this.state;
     return (
       <div>
-        {/* <Row>
-          <Col xs="12" sm="12" md="12" lg="12"> */}
         <NestedAccordion data={accordionData} size="medium" />
-        {/* </Col> */}
-        {/* </Row> */}
       </div>
     );
   }

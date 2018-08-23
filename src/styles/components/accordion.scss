@@ -7,8 +7,14 @@
     border: 1px solid $gray-accordion;
 
     &.is-nested-accordion {
-      .card-body{
-        padding: 0px;
+      >.collapse{
+        >.card-body{
+          padding: 0px;
+        }
+      }
+
+      .custom-card{
+        border: 0px;
       }
     }
   

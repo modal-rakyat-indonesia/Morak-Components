@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CardBody } from 'reactstrap';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { List } from 'immutable';
 
@@ -50,7 +50,7 @@ class CustomAccordion extends React.Component {
               {value.title}
               <span className="card-right">
                 <FontAwesomeIcon
-                  icon={value.isOpen ? faChevronUp : faChevronDown}
+                  icon={isNested ? faEllipsisV : value.isOpen ? faChevronUp : faChevronDown}
                 />
               </span>
             </h5>

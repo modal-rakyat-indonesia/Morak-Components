@@ -13,23 +13,18 @@ export default class ImplementNestedAccordion extends Component {
       accordionData: [
         {
           id: 1,
-          title: 'M-BCA',
-          description: this.setAccordionData(),
+          title: <img className="logo-bank" src="https://upload.wikimedia.org/wikipedia/id/thumb/e/e0/BCA_logo.svg/1280px-BCA_logo.svg.png" alt="https://upload.wikimedia.org/wikipedia/id/thumb/e/e0/BCA_logo.svg/1280px-BCA_logo.svg.png" />,
+          description: <ContentAccordion />,
           isOpen: false
         },
         {
           id: 2,
-          title: 'KlikBCA',
-          description: this.setAccordionData(),
+          title: <img className="logo-bank" src="https://upload.wikimedia.org/wikipedia/id/3/38/CIMB_Niaga_logo.svg" alt="https://upload.wikimedia.org/wikipedia/id/3/38/CIMB_Niaga_logo.svg" />,
+          description: <ContentAccordion />,
           isOpen: false
         }
       ]
     });
-  }
-
-  setAccordionData = () => {
-    const description = <ContentAccordion />;
-    return description;
   }
 
   render() {
