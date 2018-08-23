@@ -8,7 +8,11 @@ import '../styles/components/card.scss';
 const CustomBasicCard = ({
   header, content, timestamp, action
 }) => (
-  <div className="notification-card">
+  <div
+    className="notification-card"
+    role="presentation"
+    onClick={action}
+  >
     <Card>
       <CardBody className="header">
         <Row>

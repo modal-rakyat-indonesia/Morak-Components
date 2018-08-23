@@ -2,6 +2,8 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import CustomBasicCard from '../../components/customBasicCard';
 import CustomNotificationCard from '../../components/customNotificationCard';
+import ListCardWithTimeData from '../../components/customListData';
+import CustomListCardWithTime from '../../components/customListCardWithTime';
 
 const Cards = () => (
   <div>
@@ -11,7 +13,7 @@ const Cards = () => (
     <p>This page contains Modal Rakyat standardized controls for cards
     </p>
     <Row>
-      <Col xs="12" sm="12" md="12" lg="4">
+      <Col xs="12" sm="12" md="12" lg="6">
         <p><strong>Basic Card</strong><br />
           <small>Contains basic content, such as heading, content, and footer.</small>
         </p>
@@ -24,7 +26,7 @@ const Cards = () => (
         }}
         />
       </Col>
-      <Col xs="12" sm="12" md="12" lg="4">
+      <Col xs="12" sm="12" md="12" lg="6">
         <p><strong>Notification Card</strong><br />
           <small>Contains notification title and content with timestamp.</small>
         </p>
@@ -35,6 +37,15 @@ const Cards = () => (
           action={() => {
             console.warn('clicked!');
         }}
+        />
+      </Col>
+      <Col xs="12" sm="12" md="12" lg="6">
+        <p><strong>List Card with Time</strong><br />
+          <small>Contains card with header and list of contents, sorted chronologically.</small>
+        </p>
+        <CustomListCardWithTime
+          header="Heading"
+          contents={ListCardWithTimeData}
         />
       </Col>
     </Row>

@@ -13,6 +13,8 @@ export const initialMonthName = date => moment(date).format('MMM DD, YYYY');
 /* ----------- example format time: 10 menit yang lalu ----------- */
 export const distanceInWordsToNow = date => moment(date).startOf('hour').fromNow();
 
+/* ----------- example format time: Mar 20 ----------- */
+export const dateMonthOnly = date => moment(date).format('MMM DD');
 
 /* -- Indonesian Rupiah Style -- */
 export const IDRFormatter = number =>
