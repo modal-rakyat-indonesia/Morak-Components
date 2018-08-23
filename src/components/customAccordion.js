@@ -36,10 +36,10 @@ class CustomAccordion extends React.Component {
 
   render() {
     const { data } = this.state;
-    const { size, customClass } = this.props;
+    const { size, customClass, isNested } = this.props;
     return (
       data.map(value => (
-        <div key={value.id} className={`card custom-card ${customClass}`}>
+        <div key={value.id} className={`card custom-card ${customClass} ${isNested ? 'is-nested-accordion' : ''} `}>
           <div
             id={`btn-toggler-${value.id}`}
             className={`card-header ${size}`}
@@ -70,13 +70,15 @@ class CustomAccordion extends React.Component {
 
 CustomAccordion.defaultProps = {
   size: 'medium',
-  customClass: ''
+  customClass: '',
+  isNested: false
 };
 
 CustomAccordion.propTypes = {
   data: PropTypes.array.isRequired,
   size: PropTypes.string,
-  customClass: PropTypes.string
+  customClass: PropTypes.string,
+  isNested: PropTypes.bool
 };
 
 export default CustomAccordion;

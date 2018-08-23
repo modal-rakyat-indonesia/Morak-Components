@@ -1,5 +1,37 @@
 @import '../variables.scss';
 
+.container-topup-dana {
+  max-width: 768px;
+  margin: 0 auto;
+  .header-topup-dana {
+    background-color: #ffffff;
+    border: solid 1px #eaeef5;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 60px;
+    .logo-bank{
+      text-align: left;
+      padding-left: 21px;
+      position: relative;
+      top: 6px;
+      img{
+        width: 123px;
+        height: 43px;
+      }
+      
+    }
+    .svg-wrapper{
+      text-align: right;
+      position: relative;
+      bottom: 27px;
+      padding-right: 32px;
+    }
+  }
+}
+
 .custom-nested-accordion {
   margin-bottom: 0px;
   &:not(:last-child){

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
-import NestedAccordion from '../../components/NestedAccordion';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import CustomAccordion from '../../components/customAccordion';
+import ContentAccordion from './ContentAccordion';
+
 import '../../styles/components/nestedaccordion.scss';
 
 export default class ImplementNestedAccordion extends Component {
@@ -24,41 +28,7 @@ export default class ImplementNestedAccordion extends Component {
   }
 
   setAccordionData = () => {
-    const ListDescription = [
-      {
-        id: 1,
-        text: 'Lorem Ipsum sit dolor amet'
-      },
-      {
-        id: 2,
-        text: 'Lorem Ipsum sit dolor amet'
-      },
-      {
-        id: 3,
-        text: 'Lorem Ipsum sit dolor amet'
-      },
-      {
-        id: 4,
-        text: 'Lorem Ipsum sit dolor amet'
-      },
-      {
-        id: 5,
-        text: 'Lorem Ipsum sit dolor amet'
-      }
-    ];
-
-    const description =
-      (
-        <ol className="list-group vertical-steps">
-          {
-            ListDescription.map(desc => (
-              <li className="list-group-item vertical-step-content" key={desc.id}>
-                <p>{desc.text}</p>
-              </li>
-            ))
-          }
-        </ol>
-      );
+    const description = <ContentAccordion />;
     return description;
   }
 
@@ -67,10 +37,8 @@ export default class ImplementNestedAccordion extends Component {
     return (
       <div>
         <Row>
-          <Col>
-            <div>
-              <NestedAccordion data={accordionData} size="medium" />
-            </div>
+          <Col xs="12" sm="12" md="12" lg="12">
+            <CustomAccordion data={accordionData} size="medium" isNested />
           </Col>
         </Row>
       </div>
