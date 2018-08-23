@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { standardDate, fullMonthName, initialMonthName, distanceInWordsToNow, IDRFormatter, USDFormatter } from '../../helpers/textFormatter';
+import { standardDate, fullMonthName, initialMonthName, dateInWordsWithTime, distanceInWordsToNow, IDRFormatter, USDFormatter } from '../../helpers/textFormatter';
 
 export default class TextFormatter extends Component {
   constructor() {
@@ -14,6 +14,9 @@ export default class TextFormatter extends Component {
         },
         {
           data: '2018-08-20 20:00:00', functionName: 'initialMonthName()', action: initialMonthName('2018-08-20 20:00:00')
+        },
+        {
+          data: '2018-08-20 20:00:00', functionName: 'dateInWordsWithTime()', action: dateInWordsWithTime('2018-08-20 20:00:00')
         },
         {
           data: '2018-08-20 20:00:00', functionName: 'distanceInWordsToNow()', action: distanceInWordsToNow('2018-08-20 20:00:00')

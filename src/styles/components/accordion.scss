@@ -5,6 +5,18 @@
     text-align: left;
     border-radius: 0px !important;
     border: 1px solid $gray-accordion;
+
+    &.is-nested-accordion {
+      >.collapse{
+        >.card-body{
+          padding: 0px;
+        }
+      }
+
+      .custom-card{
+        border: 0px;
+      }
+    }
   
     .card-header{
       cursor: pointer;

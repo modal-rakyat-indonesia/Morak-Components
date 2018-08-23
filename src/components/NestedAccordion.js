@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CardBody } from 'reactstrap';
-import { faChevronDown, faChevronUp, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { List } from 'immutable';
 
 import '../styles/components/accordion.scss';
+import '../styles/components/nestedaccordion.scss';
 
-class CustomAccordion extends React.Component {
+class NestedAccordion extends React.Component {
   componentWillMount() {
     this.setState({
       data: this.props.data
@@ -36,13 +37,13 @@ class CustomAccordion extends React.Component {
 
   render() {
     const { data } = this.state;
-    const { size, customClass, isNested } = this.props;
+    const { size } = this.props;
     return (
       data.map(value => (
-        <div key={value.id} className={`card custom-card ${customClass} ${isNested ? 'is-nested-accordion' : ''} `}>
+        <div key={value.id} className="card custom-card custom-nested-accordion">
           <div
             id={`btn-toggler-${value.id}`}
-            className={`card-header ${size}`}
+            className={`card-header ${value.isOpen ? 'header-nested-accordion' : 'header-nested-accordion-noborder'} ${size}`}
             role="presentation"
             onClick={id => this.onAccordionClick(value.id)}
           >
@@ -50,7 +51,7 @@ class CustomAccordion extends React.Component {
               {value.title}
               <span className="card-right">
                 <FontAwesomeIcon
-                  icon={isNested ? faEllipsisV : value.isOpen ? faChevronUp : faChevronDown}
+                  icon={value.isOpen ? faChevronUp : faChevronDown}
                 />
               </span>
             </h5>
@@ -68,17 +69,13 @@ class CustomAccordion extends React.Component {
   }
 }
 
-CustomAccordion.defaultProps = {
-  size: 'medium',
-  customClass: '',
-  isNested: false
+NestedAccordion.defaultProps = {
+  size: 'medium'
 };
 
-CustomAccordion.propTypes = {
+NestedAccordion.propTypes = {
   data: PropTypes.array.isRequired,
-  size: PropTypes.string,
-  customClass: PropTypes.string,
-  isNested: PropTypes.bool
+  size: PropTypes.string
 };
 
-export default CustomAccordion;
+export default NestedAccordion;
