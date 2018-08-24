@@ -15,6 +15,7 @@ import Media from '../media';
 import ProgressBar from '../progressbar';
 import Tooltip from '../tooltip';
 import Cards from '../cards';
+import UploadFile from '../upload';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
@@ -52,6 +53,7 @@ const App = () => (
           <Route exact path="/components/button-group" component={ButtonGroup} />
           <Route exact path="/components/heading" component={Heading} />
           <Route exact path="/components/label" component={Label} />
+          <Route exact path="/components/upload" component={UploadFile} />
           <Route exact path="/helpers/text-formatter" component={TextFormatter} />
         </Switch>
       </main>

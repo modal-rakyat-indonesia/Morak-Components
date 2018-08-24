@@ -101,6 +101,11 @@ const navigation = {
           name: 'Tooltip',
           url: '/components/tooltip',
           icon: 'icon-drawer'
+        },
+        {
+          name: 'Upload File',
+          url: '/components/upload',
+          icon: 'icon-cloud-upload'
         }
       ]
     },
