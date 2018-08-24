@@ -31,6 +31,12 @@ export default class ImplementNestedAccordion extends Component {
     const { accordionData } = this.state;
     return (
       <div>
+        <h2>
+      Nested Accordion
+        </h2>
+        <p>This page contains Modal Rakyat standardized controls for standard
+       Nested Accordion.
+        </p>
         <Row>
           <Col xs="12" sm="12" md="12" lg="12">
             <CustomAccordion data={accordionData} size="medium" isNested />
