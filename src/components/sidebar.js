@@ -16,6 +16,11 @@ const navigation = {
       icon: 'icon-question'
     },
     {
+      name: 'Dashboard',
+      url: '/dashboard',
+      icon: 'icon-organization'
+    },
+    {
       name: 'Controls',
       url: '/controls',
       icon: 'icon-layers',
