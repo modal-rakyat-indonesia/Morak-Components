@@ -20,7 +20,7 @@
             margin-bottom: 0px;
           }
           p {
-            font-size: 0.89em;
+            font-size: 0.8em;
           }
         }
 
@@ -30,7 +30,76 @@
 
         &.footer{
           background: $gray-card-button-footer;
-          font-size: 0.89em;
+          font-size: 0.8em;
+        }
+
+        .btn-next {
+          width: 25px;
+          height: 25px;
+          padding: 0;
+          border: 1px solid $gray-card-button-border;
+          background: $gray-card-button-background;
+          svg{
+            color: $gray-card-button-text;
+            max-width: 6px;
+            position: relative;
+            top: -3px;
+          }
+        }
+      }
+    }
+  }
+
+  .basic-card-2{
+    .card{
+      border-radius: 0px;
+      text-align: left;
+      margin-bottom: 2rem;
+      max-height: 620px;
+      max-width: 100%;
+      // width: 350px;
+      overflow: hidden;
+  
+      .card-body{
+        padding: 14px;
+        &.header {
+          background-color: #faf9fd;
+          
+        }
+        &.header{
+          border: solid 1px #eaeef5;
+        
+          h5{
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 0.8em;
+          }
+        }
+        &.content{
+          padding: 0;
+          padding-bottom: 14px;
+          padding-top: 14px;
+          margin-left: 14px;
+          margin-right: 14px;
+          border-bottom: 1px solid $gray-card-button-border;
+  
+          &:nth-last-child(2){
+            border-bottom: none;
+          }
+          p{
+            margin-bottom: 0px;
+            font-size: 0.8em;
+          }
+          .amount{
+            font-size: 0.8em;
+            color: $text-gray;
+          }
+        }
+
+        &.footer{
+          background: $gray-card-button-footer;
+          font-size: 0.8em;
         }
 
         .btn-next {
@@ -76,7 +145,7 @@
           padding-bottom: 10px;
           p{
             margin-bottom: 15px;
-            font-size: 0.89em;
+            font-size: 0.8em;
           }
         }
 
@@ -130,10 +199,10 @@
         }
         p{
           margin-bottom: 0px;
-          font-size: 0.89em;
+          font-size: 0.8em;
         }
         .amount{
-          font-size: 0.89em;
+          font-size: 0.8em;
           color: $text-gray;
         }
       }
@@ -142,10 +211,10 @@
         border: 1px solid $gray-disabled-border;
         background: $gray-card-button-footer;
         padding: 14px;
-        font-size: 0.89em;
+        font-size: 0.8em;
 
         button{
-          font-size: 0.89em;
+          font-size: 0.8em;
           padding-left: 18px;
           padding-right: 18px;
         }
@@ -226,7 +295,7 @@
             margin-bottom: 0px;
 
             &.title{
-              font-size: 0.89em;
+              font-size: 0.8em;
             }
             &.subtitle{
               font-size: 0.67em;
@@ -254,7 +323,7 @@
 
         .amount{
           padding-top: 8px;
-          font-size: 0.89em;
+          font-size: 0.8em;
           .debit{
             color: $red;
           }

@@ -30,17 +30,6 @@ class CustomCarousel extends Component {
     this.state = { activeIndex: 0 };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-  }
-
-  onExiting() {
-    this.animating = true;
-  }
-
-  onExited() {
-    this.animating = false;
   }
 
   next() {
@@ -55,18 +44,11 @@ class CustomCarousel extends Component {
     this.setState({ activeIndex: nextIndex });
   }
 
-  goToIndex(newIndex) {
-    if (this.animating) return;
-    this.setState({ activeIndex: newIndex });
-  }
-
   render() {
     const { activeIndex } = this.state;
 
     const slides = items.map(item => (
       <CarouselItem
-        onExiting={this.onExiting}
-        onExited={this.onExited}
         key={item.caption}
       >
         <img src={item.src} alt={item.altText} />
@@ -75,6 +57,9 @@ class CustomCarousel extends Component {
 
     return (
       <Carousel
+        interval="50000000"
+        pause="hover"
+        slide={false}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}

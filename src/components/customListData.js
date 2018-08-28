@@ -86,3 +86,13 @@ export const listCardFooter = {
   }
 };
 
+export const contentCard = [{
+  id: 1,
+  title: 'Dana Tersedia',
+  content: IDRFormatter(176500000000)
+}, {
+  id: 2,
+  title: 'Dalam Pendanaan',
+  content: IDRFormatter(176500000000)
+}
+];
