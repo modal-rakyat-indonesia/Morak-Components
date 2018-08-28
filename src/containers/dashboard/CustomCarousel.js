@@ -57,9 +57,6 @@ class CustomCarousel extends Component {
 
     return (
       <Carousel
-        interval="50000000"
-        pause="hover"
-        slide={false}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
