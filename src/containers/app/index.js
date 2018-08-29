@@ -16,6 +16,7 @@ import ProgressBar from '../progressbar';
 import Tooltip from '../tooltip';
 import Cards from '../cards';
 import UploadFile from '../upload';
+import Carousel from '../carousel';
 import Navigation from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
 import Meta from '../../components/meta';
@@ -48,6 +49,7 @@ const App = () => (
           <Route exact path="/components/accordion" component={Accordion} />
           <Route exact path="/components/nested-accordion" component={ImplementNestedAccordion} />
           <Route exact path="/components/cards" component={Cards} />
+          <Route exact path="/components/carousel" component={Carousel} />
           <Route exact path="/components/media" component={Media} />
           <Route exact path="/components/modal" component={Modal} />
           <Route exact path="/components/progress-bar" component={ProgressBar} />

@@ -78,6 +78,11 @@ const navigation = {
           icon: 'icon-map'
         },
         {
+          name: 'Carousel',
+          url: '/components/carousel',
+          icon: 'icon-book-open'
+        },
+        {
           name: 'Media Object',
           url: '/components/media',
           icon: 'icon-picture'

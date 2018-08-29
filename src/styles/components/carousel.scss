@@ -1,6 +1,21 @@
+@import '../variables.scss';
+
 
 .carousel-item {
   img{
     width: inherit;
   }
+}
+
+.carousel-nav{
+    border-radius: 3px;
+    background-color: rgba(63, 63, 63, 0.21);
+    width: 25px;
+
+    svg{
+      color: #fff;
+      height: 12px;
+      top: -2px;
+      position: relative;
+    }
 }
