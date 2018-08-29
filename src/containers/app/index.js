@@ -24,6 +24,7 @@ import Modal from '../modal';
 import Heading from '../heading';
 import Label from '../label';
 import ImplementNestedAccordion from '../nestedAccordion';
+import Dashboard from '../dashboard';
 
 const App = () => (
   <div className="app">
@@ -38,6 +39,7 @@ const App = () => (
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/how-to-use" component={HowToUse} />
+          <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/controls/input" component={TextInput} />
           <Route exact path="/controls/buttons" component={Buttons} />
           <Route exact path="/controls/pagination" component={Pagination} />
