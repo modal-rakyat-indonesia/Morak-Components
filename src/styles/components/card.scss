@@ -67,7 +67,7 @@
           
         }
         &.header{
-          border: solid 1px #eaeef5;
+          border-bottom: solid 1px #eaeef5;
         
           h5{
             margin-bottom: 0px;
@@ -114,6 +114,10 @@
             position: relative;
             top: -3px;
           }
+        }
+
+        .basic-card-action{
+            line-height: 2.75;
         }
       }
     }

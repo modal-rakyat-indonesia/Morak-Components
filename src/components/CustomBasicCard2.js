@@ -16,7 +16,7 @@ const CustomBasicCard = ({
           <Col xs="10">
             <h5>{header}</h5>
           </Col>
-          <Col className="text-right" xs="2">
+          <Col className="text-right basic-card-action" xs="2">
             <button className="btn btn-default btn-next" onClick={action}>
               <FontAwesomeIcon icon={faChevronRight} size="xs" />
             </button>

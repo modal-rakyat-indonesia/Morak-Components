@@ -7,6 +7,8 @@ import { listBasicCard, listCardWithTimeData, listCardFooter, contentCard }
 import CustomListCardWithTime from '../../components/customListCardWithTime';
 import CustomListCard from '../../components/customListCard';
 import CustomButton from '../../components/customButton';
+import CustomProfileData from '../../components/customProfileData';
+import CustomFooter from '../../components/customFooter';
 import '../../styles/components/dashboard.scss';
 
 const images = [
@@ -27,6 +29,38 @@ const images = [
   }
 ];
 
+const footer = [{
+  id: 1,
+  text: 'Home',
+  src: '/img/footer/home.png',
+  activeSrc: '/img/footer/home-active.png',
+  url: '/home'
+}, {
+  id: 2,
+  text: 'Portfolio',
+  src: '/img/footer/portfolio.png',
+  activeSrc: '/img/footer/portfolio-active.png',
+  url: '/portfolio'
+}, {
+  id: 3,
+  text: 'Marketplace',
+  src: '/img/footer/marketplace.png',
+  activeSrc: '/img/footer/marketplace-active.png',
+  url: '/marketplace'
+}, {
+  id: 4,
+  text: 'Deposit',
+  src: '/img/footer/deposit.png',
+  activeSrc: '/img/footer/deposit-active.png',
+  url: '/deposit'
+}, {
+  id: 5,
+  text: 'Akun',
+  src: '/img/footer/account.png',
+  activeSrc: '/img/footer/account-active.png',
+  url: '/account'
+}];
+
 const button =
 (
   <div>
@@ -45,10 +79,11 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Row>
-          <Col xs="12" sm="12" md="12" lg="4">
+        <Row className="dashboard">
+          <Col xs="12" sm="12" md="12" lg="6">
             <div className="dashboard-container">
               <CustomCarousel id="carousel" images={images} interval={3000} />
+              <CustomProfileData title="Pendana" status="Verified" idNo="ID9001100" />
               <CustomBasicCard2
                 header="Selamat datang, Adjie! Anda memiliki 7 notifikasi baru."
                 contents={contentCard}
@@ -66,7 +101,7 @@ export default class Dashboard extends Component {
                 header="Aktifitas Terbaru"
                 contents={listCardWithTimeData}
               />
-
+              <CustomFooter menu={footer} />
             </div>
 
           </Col>

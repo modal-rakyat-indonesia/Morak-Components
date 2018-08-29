@@ -25,4 +25,14 @@
     right: 0px;
     padding: 10px;
   }
+
+  @media screen and (max-width: 767px){
+    width: 150px;
+    height: 35px;
+    span{
+      font-size: 10px;
+      padding: 5px;
+      width: auto;
+    }
+}
 }
