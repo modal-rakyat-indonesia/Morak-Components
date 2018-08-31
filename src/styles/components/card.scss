@@ -338,3 +338,63 @@
       }
     }
   }
+
+  .profile-card{
+    .card{
+      border-radius: 0px;
+      text-align: left;
+      margin-bottom: 2rem;
+      max-height: 620px;
+      max-width: 100%;
+      // width: 350px;
+      overflow: hidden;
+  
+      .card-body{
+        padding: 14px;
+
+        &.header, &.content{
+          border-bottom: 1px solid #ebebf3;
+        
+          h5{
+            font-size: 18px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+          .card-content{
+            .text-caption{
+              display: block;
+              color: $gray-label;
+            }
+          }
+        }
+
+        &.content{
+          padding-bottom: 4px;
+        }
+
+        &.footer{
+          background: $gray-card-button-footer;
+          font-size: 0.8em;
+        }
+
+        .btn-edit {
+          width: 25px;
+          height: 25px;
+          padding: 0;
+          background: $blue;
+          svg{
+            color: #fff;
+            max-width: 12px;
+            position: relative;
+            top: -3px;
+          }
+          &:hover{
+            background: $blue-hover;
+          }
+        }
+      }
+    }
+  }

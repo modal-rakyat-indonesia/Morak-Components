@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Map } from 'immutable';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '../styles/controls/button.scss';
 
@@ -13,17 +14,24 @@ class CustomButton extends React.Component {
 
   render() {
     const {
-      children, size, type, onClick, disabled
+      children, size, type, onClick, disabled, icon, full
     } = this.props;
     const { attributes } = this.state;
     return (
       <button
         onClick={onClick}
-        className={`custom-btn btn ${size} btn-${type}`}
+        className={`custom-btn btn ${size} btn-${type}${full ? ' full' : ''}`}
         disabled={disabled}
         {...attributes}
       >
         {children}
+        {
+          icon !== undefined ? (
+            <div className="icon">
+              <FontAwesomeIcon icon={icon} />
+            </div>
+          ) : ''
+        }
       </button>
     );
   }
@@ -36,7 +44,9 @@ CustomButton.defaultProps = {
   onClick: () => {
   },
   disabled: false,
-  attributes: {}
+  attributes: {},
+  icon: undefined,
+  full: false
 };
 
 CustomButton.propTypes = {
@@ -49,7 +59,9 @@ CustomButton.propTypes = {
     PropTypes.element
   ]),
   disabled: PropTypes.bool,
-  attributes: PropTypes.object
+  attributes: PropTypes.object,
+  icon: PropTypes.object,
+  full: PropTypes.bool
 };
 
 export default CustomButton;

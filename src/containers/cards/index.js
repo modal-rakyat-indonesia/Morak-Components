@@ -5,6 +5,7 @@ import CustomNotificationCard from '../../components/customNotificationCard';
 import { listBasicCard, listCardWithTimeData, listCardFooter } from '../../components/customListData';
 import CustomListCardWithTime from '../../components/customListCardWithTime';
 import CustomListCard from '../../components/customListCard';
+import CustomProfileCard from '../../components/customProfileCard';
 
 const Cards = () => (
   <div>
@@ -57,6 +58,45 @@ const Cards = () => (
           header="Heading"
           contents={listBasicCard}
           footer={listCardFooter}
+        />
+      </Col>
+      <Col xs="12" sm="12" md="12" lg="6">
+        <p><strong>Profile Card with Edit Button</strong><br />
+          <small>Contains card with header and list of contents, including Edit button on the header.</small>
+        </p>
+        <CustomProfileCard
+          header="Heading"
+          content={(
+            <div>
+              <p className="card-content">
+                <span className="text-caption">Tanggal Lahir</span>
+                <span className="text-content">31/08/1993</span>
+              </p>
+              <p className="card-content">
+                <span className="text-caption">Tempat Lahir</span>
+                <span className="text-content">Jakarta</span>
+              </p>
+              <p className="card-content">
+                <span className="text-caption">Jenis Kelamin</span>
+                <span className="text-content">Pria</span>
+              </p>
+              <p className="card-content">
+                <span className="text-caption">Agama</span>
+                <span className="text-content">Islam</span>
+              </p>
+              <p className="card-content">
+                <span className="text-caption">Pendidikan Terakhir</span>
+                <span className="text-content">SMA</span>
+              </p>
+              <p className="card-content">
+                <span className="text-caption">Pekerjaan</span>
+                <span className="text-content">Karyawan</span>
+              </p>
+            </div>
+          )}
+          action={() => {
+            console.warn('clicked!');
+        }}
         />
       </Col>
     </Row>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faArrowRight, faStar } from '@fortawesome/free-solid-svg-icons';
 import CustomButton from '../../components/customButton';
 
 class BasicButtons extends React.Component {
@@ -146,6 +146,29 @@ class BasicButtons extends React.Component {
               </CustomButton>
             </Col>
           </Row>
+          <p><strong>Use icon on the right side of button</strong></p>
+          <Row className="mt-3">
+            <Col xs="3">
+              <CustomButton full size="minimal" type="primary" icon={faArrowRight}>
+                Minimal
+              </CustomButton>
+            </Col>
+            <Col xs="3">
+              <CustomButton full size="small" type="primary" icon={faStar}>
+              Small
+              </CustomButton>
+            </Col>
+            <Col xs="3">
+              <CustomButton full size="medium" type="primary" icon={faArrowRight}>
+              Medium
+              </CustomButton>
+            </Col>
+            <Col xs="3">
+              <CustomButton full size="large" type="primary" icon={faStar}>
+              Large
+              </CustomButton>
+            </Col>
+          </Row>
           <p><strong>Button with action on click</strong></p>
           <Row className="mt-3">
             <Col xs="3">
@@ -154,9 +177,7 @@ class BasicButtons extends React.Component {
                 type="primary"
                 onClick={this.onClick}
               >
-                <div>
                   Clicked {count} times
-                </div>
               </CustomButton>
             </Col>
           </Row>
