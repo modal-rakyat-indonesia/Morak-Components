@@ -11,6 +11,7 @@ module.exports = {
     'max-depth': ['warn', {
       'max': 3
     }],
+    'linebreak-style': 'off',
     'max-len': [ 'off' ],
     "react/forbid-prop-types": [1, { "forbid": [ 'any'] }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
