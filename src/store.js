@@ -13,7 +13,8 @@ const initialState = {};
 const enhancers = [];
 const middleware = [
   thunk,
-  routerMiddleware(history)
+  routerMiddleware(history),
+  loadingBarMiddleware()
 ];
 
 if (process.env.NODE_ENV === 'development') {
@@ -34,8 +35,7 @@ const composedEnhancers = compose(
 const store = createStore(
   rootReducer,
   initialState,
-  composedEnhancers,
-  applyMiddleware(loadingBarMiddleware())
+  composedEnhancers
 );
 
 const user = Cookies.get('user');

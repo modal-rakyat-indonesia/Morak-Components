@@ -138,7 +138,7 @@ const Sidebar = () => (
   <AppSidebar fixed display="lg">
     <AppSidebarHeader />
     <AppSidebarForm />
-    <AppSidebarNav navConfig={navigation} location={window.location} {...this.props} />
+    <AppSidebarNav navConfig={navigation} location={window.location} />
     <AppSidebarFooter />
     <AppSidebarMinimizer />
   </AppSidebar>

@@ -17,7 +17,7 @@ const target = document.querySelector('#root');
 render(
   <Provider store={store}>
     <I18n translations={translations} initialLang="id">
-      <ConnectedRouter history={history}>
+      <ConnectedRouter history={history} store={store}>
         <div>
           <App />
         </div>
