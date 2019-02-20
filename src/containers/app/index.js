@@ -26,6 +26,7 @@ import Heading from '../heading';
 import Label from '../label';
 import ImplementNestedAccordion from '../nestedAccordion';
 import Dashboard from '../dashboard';
+import ZipDownloader from '../zipdownloader';
 
 const App = () => (
   <div className="app">
@@ -59,6 +60,8 @@ const App = () => (
           <Route exact path="/components/label" component={Label} />
           <Route exact path="/components/upload" component={UploadFile} />
           <Route exact path="/helpers/text-formatter" component={TextFormatter} />
+          <Route exact path="/helpers/text-formatter" component={TextFormatter} />
+          <Route exact path="/helpers/zip-downloader" component={ZipDownloader} />
         </Switch>
       </main>
     </div>

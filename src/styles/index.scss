@@ -76,6 +76,12 @@ img{
   }
 }
 
+.header-fixed{
+  .app-header{
+    padding-top: 0;
+  }
+}
+
 .sidebar-fixed{
   .sidebar{
     width: 250px;
