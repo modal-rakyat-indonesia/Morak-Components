@@ -8,7 +8,7 @@ import '../styles/controls/button.scss';
 class CustomButton extends React.Component {
   componentWillMount() {
     this.setState({
-      attributes: Map(this.props).delete('attributes').toJS()
+      attributes: Map(this.props).delete('attributes').delete('full').toJS()
     });
   }
 

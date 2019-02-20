@@ -128,6 +128,11 @@ const navigation = {
           name: 'Text Formatter',
           url: '/helpers/text-formatter',
           icon: 'icon-note'
+        },
+        {
+          name: 'ZIP Downloader',
+          url: '/helpers/zip-downloader',
+          icon: 'icon-docs'
         }
       ]
     }
