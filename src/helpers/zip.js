@@ -2,8 +2,9 @@
 import axios from 'axios';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import moment from 'moment';
 
-const exampleUrl = 'https://develop-modalrakyat.s3.amazonaws.com/documents/cc7cfa90-365a-11e9-a862-5b18735e1091.jpg';
+const exampleUrl = `https://develop-modalrakyat.s3.amazonaws.com/documents/3c5da7a0-e189-11e8-af26-c13ffa50b3bb.jpg?timestamp=${moment().format('X')}`;
 // const exampleUrl = '/img/zip-test.jpg';
 
 export const getFilesFromUrls = (urls) => {
